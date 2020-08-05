@@ -7,12 +7,12 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
-class Ambulance extends StatefulWidget {
+class Police extends StatefulWidget {
   @override
-  _AmbulanceState createState() => _AmbulanceState();
+  _PoliceState createState() => _PoliceState();
 }
 
-class _AmbulanceState extends State<Ambulance> {
+class _PoliceState extends State<Police> {
   FSBStatus drawerStatus;
 
   @override

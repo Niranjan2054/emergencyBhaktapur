@@ -7,12 +7,12 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
-class FireBrigade extends StatefulWidget {
+class Favourite extends StatefulWidget {
   @override
-  _FireBrigadeState createState() => _FireBrigadeState();
+  _FavouriteState createState() => _FavouriteState();
 }
 
-class _FireBrigadeState extends State<FireBrigade> {
+class _FavouriteState extends State<Favourite> {
   FSBStatus drawerStatus;
 
   @override
@@ -21,7 +21,7 @@ class _FireBrigadeState extends State<FireBrigade> {
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Fire Brigade"),
+          child: Text("Favourite"),
         ),
         leading: IconButton(
             icon: Icon(
