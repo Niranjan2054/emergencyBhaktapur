@@ -72,12 +72,12 @@ class _PoliceState extends State<Police> {
                     height: 20,
                   ),
                   Card(
-                    title: "Bhaktapur Ambulance",
-                    contact: "9843803829",
+                    title: "Police",
+                    contact: "100",
                   ),
                   Card(
-                    title: "Janaswasthaya Ambulance",
-                    contact: "9840521409",
+                    title: "Bhaktapur",
+                    contact: "01-6614607",
                   ),
                 ],
               ),

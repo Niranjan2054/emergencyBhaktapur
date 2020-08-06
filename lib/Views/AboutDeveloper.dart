@@ -19,25 +19,25 @@ class AboutDeveloper extends StatelessWidget {
             children: <Widget>[              
               DeveloperCard(
                 name: "Bikesh Sitikhu",
-                college:"KCE074BCT016",  
+                college:"KhCE",  
                 email:"sitikhubikesh@gmail.com",              
                 image: "assets/images/developers/bikesh.jpg",
               ),
               DeveloperCard(
                 name: "Luja Shakya",                
-                college:"KCE074BCT022",
+                college:"KhCE",
                 email:"shakyaluja445@gmail.com",                
                 image: "assets/images/developers/luja.jpg",
               ),
               DeveloperCard(
                 name: "Niranjan Bekoju",
-                college:"KCE074BCT025",
+                college:"KhCE",
                 email:"bekojuniranjan@gmail.com",
                 image: "assets/images/developers/niranjan.jpg",
               ),
               DeveloperCard(
                 name: "Sunil Banmala",
-                college:"KCE074BCT045",
+                college:"KhCE",
                 email:"sunilbanmala0@gmail.com",
                 image: "assets/images/developers/sunil.jpg",
               ),

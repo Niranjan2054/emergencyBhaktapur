@@ -72,12 +72,76 @@ class _AmbulanceState extends State<Ambulance> {
                     height: 20,
                   ),
                   Card(
-                    title: "Bhaktapur Ambulance",
-                    contact: "9843803829",
+                    title: "Bhaktapur Cancer Hospital",
+                    contact: "9841539930",
                   ),
                   Card(
-                    title: "Janaswasthaya Ambulance",
-                    contact: "9840521409",
+                    title: "Bhaktapur Hospital",
+                    contact: "9840256340",
+                  ),
+                  Card(
+                    title: "Bhaktapur Municipality",
+                    contact: "9851082799",
+                  ),
+                  Card(
+                    title: "Madhayapur Municipality",
+                    contact: "9851010714",
+                  ),
+                  Card(
+                    title: "Changunarayan Municipality",
+                    contact: "9851214809",
+                  ),
+                   Card(
+                    title: "Bhaktapur Red Cross",
+                    contact: "9849857332",
+                  ),
+                  Card(
+                    title: "Changunarayan Red Cross",
+                    contact: "016622464",
+                  ),
+                  Card(
+                    title: "Tathali Red Cross",
+                    contact: "9841233815",
+                  ),
+                  Card(
+                    title: "Nagarkot Samudaya Red Cross",
+                    contact: "9741233600",
+                  ),
+                  Card(
+                    title: "Nalinchowk Red Cross",
+                    contact: "9741208341",
+                  ),
+                  Card(
+                    title: "Aakhanda Sewa Samiti",
+                    contact: "9841323296",
+                  ),
+                  Card(
+                    title: "Bramayani Sudal",
+                    contact: "9843633744",
+                  ),
+                  Card(
+                    title: "Dr. Iwamura Memorial",
+                    contact: "9860025333",
+                  ),
+                  Card(
+                    title: "Gramin Bikeash Purbadhar Kendra",
+                    contact: "9841477794",
+                  ),
+                  Card(
+                    title: "Harinam Sankritan Sewa Samiti",
+                    contact: "9860355944",
+                  ),
+                  Card(
+                    title: "Kathmandu Cancer Center",
+                    contact: "9841466550",
+                  ),
+                  Card(
+                    title: "Siddhi Smriti Hospital",
+                    contact: "9841204991",
+                  ),
+                  Card(
+                    title: "Sudal Bramahayani Bikash Kendra",
+                    contact: "9843633744",
                   ),
                 ],
               ),

@@ -72,12 +72,20 @@ class _FireBrigadeState extends State<FireBrigade> {
                     height: 20,
                   ),
                   Card(
-                    title: "Bhaktapur Ambulance",
-                    contact: "9843803829",
+                    title: "Fire Brigade",
+                    contact: "101",
                   ),
                   Card(
-                    title: "Janaswasthaya Ambulance",
-                    contact: "9840521409",
+                    title: "Bhaktapur",
+                    contact: "01-6610649",
+                  ),
+                  Card(
+                    title: "Kathmandu",
+                    contact: "01-4221177",
+                  ),
+                  Card(
+                    title: "Lalitpur",
+                    contact: "01-5521111",
                   ),
                 ],
               ),

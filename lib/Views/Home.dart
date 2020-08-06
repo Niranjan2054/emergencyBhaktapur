@@ -7,7 +7,7 @@ import 'package:emergencyBhaktapur/Views/Ambulance.dart';
 import 'package:emergencyBhaktapur/Views/Hospital.dart';
 import 'package:emergencyBhaktapur/Views/FireBrigade.dart';
 import 'package:emergencyBhaktapur/Views/Police.dart';
-import 'package:emergencyBhaktapur/Views/Favourite.dart';
+import 'package:emergencyBhaktapur/Views/SabBahan.dart';
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
             Hospital(),
             FireBrigade(),
             Police(),
-            Favourite(),
+            SabBahan(),
           ],
         ),
       ),

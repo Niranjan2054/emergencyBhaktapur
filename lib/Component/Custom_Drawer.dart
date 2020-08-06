@@ -34,7 +34,7 @@ class CustomDrawer extends StatelessWidget {
                     height: 150,
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('assets/image/college.jpg'),
+                            image: AssetImage('assets/images/ambulance.jpg'),
                             fit: BoxFit.cover)),
                   ),
                   Container(

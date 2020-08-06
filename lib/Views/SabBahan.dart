@@ -7,12 +7,12 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
-class Favourite extends StatefulWidget {
+class SabBahan extends StatefulWidget {
   @override
-  _FavouriteState createState() => _FavouriteState();
+  _SabBahanState createState() => _SabBahanState();
 }
 
-class _FavouriteState extends State<Favourite> {
+class _SabBahanState extends State<SabBahan> {
   FSBStatus drawerStatus;
 
   @override
@@ -21,7 +21,7 @@ class _FavouriteState extends State<Favourite> {
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Favourite"),
+          child: Text("Sab Bahan"),
         ),
         leading: IconButton(
             icon: Icon(
@@ -72,12 +72,24 @@ class _FavouriteState extends State<Favourite> {
                     height: 20,
                   ),
                   Card(
-                    title: "Bhaktapur Ambulance",
-                    contact: "9843803829",
+                    title: "Bhaktapur",
+                    contact: "01-6613200",
                   ),
                   Card(
-                    title: "Janaswasthaya Ambulance",
-                    contact: "9840521409",
+                    title: "Bhaktapur Cancer Hospital",
+                    contact: "9860171552",
+                  ),
+                  Card(
+                    title: "Bir Hospital",
+                    contact: "01-4221119",
+                  ),
+                   Card(
+                    title: "Devdol Samaj",
+                    contact: "9818569351",
+                  ),
+                  Card(
+                    title: "Thimi Red Cross ",
+                    contact: "9849170256",
                   ),
                 ],
               ),
