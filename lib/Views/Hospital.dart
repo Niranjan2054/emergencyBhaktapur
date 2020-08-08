@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:emergencyBhaktapur/Views/Map.dart';
 import 'dart:async';
 
 class Hospital extends StatefulWidget {
@@ -23,6 +24,17 @@ class _HospitalState extends State<Hospital> {
           height: 30,
           child: Text("Hospital"),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              FontAwesome.map_marker,
+              color: Colors.white,
+            ),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> GoogleMaps()));
+            },
+          ),
+        ],
         leading: IconButton(
             icon: Icon(
               MaterialCommunityIcons.menu,
@@ -135,10 +147,6 @@ class _HospitalState extends State<Hospital> {
                 Card(
                   title: "Siddhi Memorial Women and Children Hospital",
                   contact: "01-6612945",
-                ),
-                Card(
-                  title: "Siddhi Smriti Hospital",
-                  contact: "01-6612947",
                 ),
                 Card(
                   title: "Summit Hospital",

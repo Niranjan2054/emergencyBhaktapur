@@ -6,6 +6,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
+
 class Ambulance extends StatefulWidget {
   @override
   _AmbulanceState createState() => _AmbulanceState();
@@ -63,22 +64,18 @@ class _AmbulanceState extends State<Ambulance> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                
                 Card(
                   title: "Bhaktapur Cancer Hospital",
                   contact: "9841539930",
                 ),
-                
                 Card(
                   title: "Bhaktapur Hospital",
                   contact: "9840256340",
                 ),
-                
                 Card(
                   title: "Dr. Iwamura Memorial",
                   contact: "9860025333",
                 ),
-                
                 Card(
                   title: "Kathmandu Cancer Center",
                   contact: "9841466550",
@@ -91,7 +88,9 @@ class _AmbulanceState extends State<Ambulance> {
                   title: "Siddhi Smriti Hospital",
                   contact: "9841204991",
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Text(
                   'Red Cross',
                   style: TextStyle(
@@ -116,7 +115,7 @@ class _AmbulanceState extends State<Ambulance> {
                   title: "Red Cross Nalinchowk",
                   contact: "9741208341",
                 ),
-                 Card(
+                Card(
                   title: "Red Cross Tathali",
                   contact: "9841233815",
                 ),
@@ -147,8 +146,7 @@ class _AmbulanceState extends State<Ambulance> {
                   title: "Municipality Madhayapur",
                   contact: "9851010714",
                 ),
-                
-                 SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 Text(
@@ -197,8 +195,7 @@ class _AmbulanceState extends State<Ambulance> {
 }
 
 class Card extends StatelessWidget {
-  Card({Key key, this.title, this.contact})
-      : super(key: key);
+  Card({Key key, this.title, this.contact}) : super(key: key);
   String title, contact;
 
   Future<void> _makePhoneCall(String url) async {
@@ -232,11 +229,17 @@ class Card extends StatelessWidget {
             this.title,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          subtitle: Text(this.contact,style: TextStyle(fontSize:16),),
-          trailing: Icon(FontAwesomeIcons.phone,color: Colors.green,),
+          subtitle: Text(
+            this.contact,
+            style: TextStyle(fontSize: 16),
+          ),
+          trailing: Icon(
+            FontAwesomeIcons.phone,
+            color: Colors.green,
+          ),
           onTap: () {
             print('Contact ');
-            _makePhoneCall('tel:'+this.contact);
+            _makePhoneCall('tel:' + this.contact);
           },
         ),
       ),

@@ -1,13 +1,5 @@
-// import 'package:KhCE/Views/Enquiry.dart';
-// import 'package:KhCE/Views/Fee.dart';
-// import 'package:KhCE/Views/Map.dart';
-// import 'package:KhCE/Views/Panaroma.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:KhCE/Views/Scholarship.dart';
-// import 'package:KhCE/Views/KhwopaCircle.dart';
-// import 'package:KhCE/Views/AboutDeveloper.dart';
 import 'package:emergencyBhaktapur/Views/AboutDeveloper.dart';
 
 class CustomDrawer extends StatelessWidget {
