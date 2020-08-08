@@ -37,126 +37,110 @@ class _HospitalState extends State<Hospital> {
             }),
         automaticallyImplyLeading: false,
       ),
-      body: SwipeDetector(
-        onSwipeRight: () {
-          setState(() {
-            drawerStatus = FSBStatus.FSB_OPEN;
-          });
-        },
-        onSwipeLeft: () {
-          setState(() {
-            drawerStatus = FSBStatus.FSB_CLOSE;
-          });
-        },
-        swipeConfiguration: SwipeConfiguration(
-          verticalSwipeMinDisplacement: 75,
-          horizontalSwipeMinVelocity: 75,
+      body: FoldableSidebarBuilder(
+        drawerBackgroundColor: Colors.white,
+        status: drawerStatus,
+        drawer: CustomDrawer(
+          closeDrawer: () {
+            setState(() {
+              drawerStatus = FSBStatus.FSB_CLOSE;
+            });
+          },
         ),
-        child: FoldableSidebarBuilder(
-          drawerBackgroundColor: Colors.white,
-          status: drawerStatus,
-          drawer: CustomDrawer(
-            closeDrawer: () {
-              setState(() {
-                drawerStatus = FSBStatus.FSB_CLOSE;
-              });
-            },
-          ),
-          screenContents: SingleChildScrollView(
-            child: Container(
-              width: MediaQuery.of(context).size.width - 20,
-              margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Card(
-                    title: "Bhaktapur Cancer Hospital",
-                    contact: "01-6611532",
-                  ),
-                  Card(
-                    title: "Bhaktapur Hospital",
-                    contact: "01-6610798",
-                  ),
-                  Card(
-                    title: "Bir Hospital",
-                    contact: "01-4221988",
-                  ),
-                  Card(
-                    title: "Blood Bank",
-                    contact: "01-4225344",
-                  ),
-                  Card(
-                    title: "Dhulikhel Hospital",
-                    contact: "011-490497",
-                  ),
-                  Card(
-                    title: "Gangala Hospital",
-                    contact: "01-4371322",
-                  ),
-                  Card(
-                    title: "Iwamura M. Hospital",
-                    contact: "01-6612695",
-                  ),
-                   Card(
-                    title: "Kanti Children's Hospital",
-                    contact: "01-4414798",
-                  ),
-                  Card(
-                    title: "Madhyapur Hospital",
-                    contact: "01-6631658",
-                  ),
-                  Card(
-                    title: "Nagarik C. Hospital",
-                    contact: "01-6637700",
-                  ),
-                  Card(
-                    title: "Nepal Eye Hospital",
-                    contact: "01-4250691",
-                  ),
-                  Card(
-                    title: "Nepal Korea Friendship Hospital",
-                    contact: "01-6633442",
-                  ),
-                  Card(
-                    title: "Patan Hospital",
-                    contact: "01-5522266",
-                  ),
-                  Card(
-                    title: "Prasuti Griha",
-                    contact: "01-4411550",
-                  ),
-                   Card(
-                    title: "Sahid DharmaBhakta National Transplant Center",
-                    contact: "01-6614709",
-                  ),
-                  Card(
-                    title: "Siddhi Smriti Hospital",
-                    contact: "01-6612947",
-                  ),
-                  Card(
-                    title: "Summit Hospital",
-                    contact: "01-6631736",
-                  ),
-                   Card(
-                    title: "Bagwati Sthan Janaswasthaya",
-                    contact: "01-6612163",
-                  ),
-                   Card(
-                    title: "Byasi Janaswasthaya",
-                    contact: "01-6610648",
-                  ),
-                  Card(
-                    title: "Changu Primary Health Care",
-                    contact: "9849424813",
-                  ),
-                   Card(
-                    title: "Chayamasingh Janaswasthaya",
-                    contact: "01-6610317",
-                  ),
-                ],
-              ),
+        screenContents: SingleChildScrollView(
+          child: Container(
+            width: MediaQuery.of(context).size.width - 20,
+            margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 20,
+                ),
+                Card(
+                  title: "Bhaktapur Cancer Hospital",
+                  contact: "01-6611532",
+                ),
+                Card(
+                  title: "Bhaktapur Hospital",
+                  contact: "01-6610798",
+                ),
+                Card(
+                  title: "Bir Hospital",
+                  contact: "01-4221988",
+                ),
+                Card(
+                  title: "Blood Bank",
+                  contact: "01-4225344",
+                ),
+                Card(
+                  title: "Dhulikhel Hospital",
+                  contact: "011-490497",
+                ),
+                Card(
+                  title: "Gangala Hospital",
+                  contact: "01-4371322",
+                ),
+                Card(
+                  title: "Iwamura M. Hospital",
+                  contact: "01-6612695",
+                ),
+                 Card(
+                  title: "Kanti Children's Hospital",
+                  contact: "01-4414798",
+                ),
+                Card(
+                  title: "Madhyapur Hospital",
+                  contact: "01-6631658",
+                ),
+                Card(
+                  title: "Nagarik C. Hospital",
+                  contact: "01-6637700",
+                ),
+                Card(
+                  title: "Nepal Eye Hospital",
+                  contact: "01-4250691",
+                ),
+                Card(
+                  title: "Nepal Korea Friendship Hospital",
+                  contact: "01-6633442",
+                ),
+                Card(
+                  title: "Patan Hospital",
+                  contact: "01-5522266",
+                ),
+                Card(
+                  title: "Prasuti Griha",
+                  contact: "01-4411550",
+                ),
+                 Card(
+                  title: "Sahid DharmaBhakta National Transplant Center",
+                  contact: "01-6614709",
+                ),
+                Card(
+                  title: "Siddhi Smriti Hospital",
+                  contact: "01-6612947",
+                ),
+                Card(
+                  title: "Summit Hospital",
+                  contact: "01-6631736",
+                ),
+                 Card(
+                  title: "Bagwati Sthan Janaswasthaya",
+                  contact: "01-6612163",
+                ),
+                 Card(
+                  title: "Byasi Janaswasthaya",
+                  contact: "01-6610648",
+                ),
+                Card(
+                  title: "Changu Primary Health Care",
+                  contact: "9849424813",
+                ),
+                 Card(
+                  title: "Chayamasingh Janaswasthaya",
+                  contact: "01-6610317",
+                ),
+              ],
             ),
           ),
         ),

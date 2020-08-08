@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Emergency Bhaktapur',
       theme: ThemeData(
-        primarySwatch: AppThemeColor,
+        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData.dark(),

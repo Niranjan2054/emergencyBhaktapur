@@ -8,6 +8,8 @@ import 'package:emergencyBhaktapur/Views/Hospital.dart';
 import 'package:emergencyBhaktapur/Views/FireBrigade.dart';
 import 'package:emergencyBhaktapur/Views/Police.dart';
 import 'package:emergencyBhaktapur/Views/SabBahan.dart';
+import 'package:swipedetector/swipedetector.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -16,6 +18,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   GlobalKey _bottomNavigationKey = GlobalKey();
   PageController _pageController;
+  int current_page=0;
 
   @override
   void initState() {
@@ -36,26 +39,43 @@ class _HomeState extends State<Home> {
         MoveToBackground.moveTaskToBack();
         return false;
       },
-      child: Scaffold(
-        bottomNavigationBar: bnb.BottomNavigationBar(
-          bottomNavigationKey: _bottomNavigationKey,
-          pageController: _pageController,
-        ),
-        body: PageView(
-          controller: _pageController,
-          physics: NeverScrollableScrollPhysics(),
-          onPageChanged: (index) {
-            final CurvedNavigationBarState navBarState =
-                _bottomNavigationKey.currentState;
-            navBarState.setPage(index);
-          },
-          children: <Widget>[
-            Ambulance(),
-            Hospital(),
-            FireBrigade(),
-            Police(),
-            SabBahan(),
-          ],
+      child: SwipeDetector(
+        onSwipeLeft: (){
+          if (current_page<4) {
+            current_page++;  
+          }
+          _pageController.jumpToPage(current_page);
+        },
+        onSwipeRight: (){
+          if (current_page>0) {
+            current_page--;
+          }
+          _pageController.jumpToPage(current_page);
+        },
+        swipeConfiguration: SwipeConfiguration(horizontalSwipeMinDisplacement: 75),
+        child: Scaffold(
+          bottomNavigationBar: bnb.BottomNavigationBar(
+            bottomNavigationKey: _bottomNavigationKey,
+            pageController: _pageController,
+          ),
+          body: PageView(
+            controller: _pageController,
+            physics: NeverScrollableScrollPhysics(),
+            onPageChanged: (index) {
+              current_page=index;
+              final CurvedNavigationBarState navBarState =
+                  _bottomNavigationKey.currentState;
+              navBarState.setPage(index);
+            },
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              Ambulance(),
+              Hospital(),
+              FireBrigade(),
+              Police(),
+              SabBahan(),
+            ],
+          ),
         ),
       ),
     );

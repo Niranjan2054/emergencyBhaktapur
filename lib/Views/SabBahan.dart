@@ -37,62 +37,46 @@ class _SabBahanState extends State<SabBahan> {
             }),
         automaticallyImplyLeading: false,
       ),
-      body: SwipeDetector(
-        onSwipeRight: () {
-          setState(() {
-            drawerStatus = FSBStatus.FSB_OPEN;
-          });
-        },
-        onSwipeLeft: () {
-          setState(() {
-            drawerStatus = FSBStatus.FSB_CLOSE;
-          });
-        },
-        swipeConfiguration: SwipeConfiguration(
-          verticalSwipeMinDisplacement: 75,
-          horizontalSwipeMinVelocity: 75,
+      body: FoldableSidebarBuilder(
+        drawerBackgroundColor: Colors.white,
+        status: drawerStatus,
+        drawer: CustomDrawer(
+          closeDrawer: () {
+            setState(() {
+              drawerStatus = FSBStatus.FSB_CLOSE;
+            });
+          },
         ),
-        child: FoldableSidebarBuilder(
-          drawerBackgroundColor: Colors.white,
-          status: drawerStatus,
-          drawer: CustomDrawer(
-            closeDrawer: () {
-              setState(() {
-                drawerStatus = FSBStatus.FSB_CLOSE;
-              });
-            },
-          ),
-          screenContents: SingleChildScrollView(
-            child: Container(
-              width: MediaQuery.of(context).size.width - 20,
-              margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Card(
-                    title: "Bhaktapur",
-                    contact: "01-6613200",
-                  ),
-                  Card(
-                    title: "Bhaktapur Cancer Hospital",
-                    contact: "9860171552",
-                  ),
-                  Card(
-                    title: "Bir Hospital",
-                    contact: "01-4221119",
-                  ),
-                   Card(
-                    title: "Devdol Samaj",
-                    contact: "9818569351",
-                  ),
-                  Card(
-                    title: "Thimi Red Cross ",
-                    contact: "9849170256",
-                  ),
-                ],
-              ),
+        screenContents: SingleChildScrollView(
+          child: Container(
+            width: MediaQuery.of(context).size.width - 20,
+            margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 20,
+                ),
+                Card(
+                  title: "Bhaktapur",
+                  contact: "01-6613200",
+                ),
+                Card(
+                  title: "Bhaktapur Cancer Hospital",
+                  contact: "9860171552",
+                ),
+                Card(
+                  title: "Bir Hospital",
+                  contact: "01-4221119",
+                ),
+                 Card(
+                  title: "Devdol Samaj",
+                  contact: "9818569351",
+                ),
+                Card(
+                  title: "Thimi Red Cross ",
+                  contact: "9849170256",
+                ),
+              ],
             ),
           ),
         ),

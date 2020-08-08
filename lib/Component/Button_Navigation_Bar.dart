@@ -2,7 +2,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavigationBar extends StatelessWidget {
   const BottomNavigationBar({
@@ -24,8 +23,8 @@ class BottomNavigationBar extends StatelessWidget {
       key: _bottomNavigationKey,
       height: _size.height > 650 ? 55.0 : 45.0,
       backgroundColor: Colors.white,
-      color: Colors.blue[800],
-      buttonBackgroundColor: Colors.blue[800],
+      color: Colors.red,
+      buttonBackgroundColor: Colors.red,
       animationCurve: Curves.linearToEaseOut,
       animationDuration: Duration(milliseconds: 500),
       onTap: (index) {

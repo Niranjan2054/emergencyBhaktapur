@@ -37,58 +37,42 @@ class _FireBrigadeState extends State<FireBrigade> {
             }),
         automaticallyImplyLeading: false,
       ),
-      body: SwipeDetector(
-        onSwipeRight: () {
-          setState(() {
-            drawerStatus = FSBStatus.FSB_OPEN;
-          });
-        },
-        onSwipeLeft: () {
-          setState(() {
-            drawerStatus = FSBStatus.FSB_CLOSE;
-          });
-        },
-        swipeConfiguration: SwipeConfiguration(
-          verticalSwipeMinDisplacement: 75,
-          horizontalSwipeMinVelocity: 75,
+      body: FoldableSidebarBuilder(
+        drawerBackgroundColor: Colors.white,
+        status: drawerStatus,
+        drawer: CustomDrawer(
+          closeDrawer: () {
+            setState(() {
+              drawerStatus = FSBStatus.FSB_CLOSE;
+            });
+          },
         ),
-        child: FoldableSidebarBuilder(
-          drawerBackgroundColor: Colors.white,
-          status: drawerStatus,
-          drawer: CustomDrawer(
-            closeDrawer: () {
-              setState(() {
-                drawerStatus = FSBStatus.FSB_CLOSE;
-              });
-            },
-          ),
-          screenContents: SingleChildScrollView(
-            child: Container(
-              width: MediaQuery.of(context).size.width - 20,
-              margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Card(
-                    title: "Fire Brigade",
-                    contact: "101",
-                  ),
-                  Card(
-                    title: "Bhaktapur",
-                    contact: "01-6610649",
-                  ),
-                  Card(
-                    title: "Kathmandu",
-                    contact: "01-4221177",
-                  ),
-                  Card(
-                    title: "Lalitpur",
-                    contact: "01-5521111",
-                  ),
-                ],
-              ),
+        screenContents: SingleChildScrollView(
+          child: Container(
+            width: MediaQuery.of(context).size.width - 20,
+            margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 20,
+                ),
+                Card(
+                  title: "Fire Brigade",
+                  contact: "101",
+                ),
+                Card(
+                  title: "Bhaktapur",
+                  contact: "01-6610649",
+                ),
+                Card(
+                  title: "Kathmandu",
+                  contact: "01-4221177",
+                ),
+                Card(
+                  title: "Lalitpur",
+                  contact: "01-5521111",
+                ),
+              ],
             ),
           ),
         ),
