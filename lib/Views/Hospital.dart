@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:emergencyBhaktapur/Views/Map.dart';
+import 'package:emergencyBhaktapur/Views/HospitalMap.dart';
 import 'dart:async';
 
 class Hospital extends StatefulWidget {

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:swipedetector/swipedetector.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
+import 'package:emergencyBhaktapur/Views/PoliceMaps.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
 class Police extends StatefulWidget {
@@ -23,6 +23,17 @@ class _PoliceState extends State<Police> {
           height: 30,
           child: Text("Police"),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              FontAwesome.map_marker,
+              color: Colors.white,
+            ),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> GoogleMaps()));
+            },
+          ),
+        ],
         leading: IconButton(
             icon: Icon(
               MaterialCommunityIcons.menu,
