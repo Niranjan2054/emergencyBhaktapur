@@ -1,8 +1,26 @@
 import 'package:flutter/material.dart';
-// import 'package:cached_network_image/cached_network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-
+Future<void> _makePhoneCall(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
 class AboutDeveloper extends StatelessWidget {
   @override
@@ -20,24 +38,28 @@ class AboutDeveloper extends StatelessWidget {
               DeveloperCard(
                 name: "Bikesh Sitikhu",
                 college:"KhCE",  
-                email:"sitikhubikesh@gmail.com",              
+                email:"sitikhubikesh@gmail.com",        
+                phone: '9860117649',      
                 image: "assets/images/developers/bikesh.jpg",
               ),
               DeveloperCard(
                 name: "Luja Shakya",                
                 college:"KhCE",
+                phone: '9860685929',      
                 email:"shakyaluja445@gmail.com",                
                 image: "assets/images/developers/luja.jpg",
               ),
               DeveloperCard(
                 name: "Niranjan Bekoju",
                 college:"KhCE",
+                phone: '9843803828',      
                 email:"bekojuniranjan@gmail.com",
                 image: "assets/images/developers/niranjan.jpg",
               ),
               DeveloperCard(
                 name: "Sunil Banmala",
                 college:"KhCE",
+                phone: '9840521409',      
                 email:"sunilbanmala0@gmail.com",
                 image: "assets/images/developers/sunil.jpg",
               ),
@@ -50,14 +72,14 @@ class AboutDeveloper extends StatelessWidget {
 }
 
 class DeveloperCard extends StatelessWidget {
-  DeveloperCard({Key key, this.name, this.college,this.email, this.image}) : super(key: key);
-  String name, crn, image,college,email;
+  DeveloperCard({Key key, this.name, this.college,this.email,this.phone, this.image}) : super(key: key);
+  String name, crn, image,college,email,phone;
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
           width: MediaQuery.of(context).size.width,
-          height: 150,
+          height: 200,
           margin: EdgeInsets.only(top: 10, bottom: 10),
           child: Card(
             elevation: 5,
@@ -86,11 +108,13 @@ class DeveloperCard extends StatelessWidget {
                                                  
                           IconButton(
                             icon: FaIcon(FontAwesomeIcons.university), 
-                            onPressed: () { print("Pressed"); }
+                            onPressed: () { 
+                              _launchInBrowser('https://khwopa.edu.np/');
+                            }
                           ),
                           Text(                            
                             this.college,
-                            maxLines: 2,
+                            maxLines: 1,
                           ),
                         ],
                       ),
@@ -98,11 +122,27 @@ class DeveloperCard extends StatelessWidget {
                         children: <Widget>[
                           IconButton(
                             icon: FaIcon(FontAwesomeIcons.envelope), 
-                            onPressed: () { print("Pressed"); }
+                            onPressed: () { 
+                              launch("mailto:"+this.email);
+                            }
                           ),
                           Text(
                             this.email,
-                            maxLines: 2,
+                            maxLines: 1,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          IconButton(
+                            icon: FaIcon(FontAwesomeIcons.phone), 
+                            onPressed: () { 
+                              _makePhoneCall('tel:'+this.phone);
+                            }
+                          ),
+                          Text(
+                            this.phone,
+                            maxLines: 1,
                           ),
                         ],
                       ),
