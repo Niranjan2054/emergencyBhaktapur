@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:swipedetector/swipedetector.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';

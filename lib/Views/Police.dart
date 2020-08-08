@@ -61,8 +61,20 @@ class _PoliceState extends State<Police> {
                   contact: "100",
                 ),
                 Card(
-                  title: "Bhaktapur",
-                  contact: "01-6614607",
+                  title: "Mahanagariya Prahari Parisar -Bhaktapur ",
+                  contact: "9851283020",
+                ),
+                Card(
+                  title: "Mahanagariya Prahari Parisar -Bhaktapur (Notice)",
+                  contact: "9851114821",
+                ),
+                Card(
+                  title: "Mahanagariya Prahari Bit, Thimi",
+                  contact: "9851283599",
+                ),
+                Card(
+                  title: "Mahanagariya Prahari Bit, Jagati",
+                  contact: "9851283028",
                 ),
               ],
             ),

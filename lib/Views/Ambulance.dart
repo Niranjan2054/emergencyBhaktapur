@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:swipedetector/swipedetector.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -56,73 +55,133 @@ class _AmbulanceState extends State<Ambulance> {
                 SizedBox(
                   height: 20,
                 ),
+                Text(
+                  "Hospital's Ambulance",
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                
                 Card(
                   title: "Bhaktapur Cancer Hospital",
                   contact: "9841539930",
                 ),
+                
                 Card(
                   title: "Bhaktapur Hospital",
                   contact: "9840256340",
                 ),
+                
                 Card(
-                  title: "Bhaktapur Municipality",
-                  contact: "9851082799",
+                  title: "Dr. Iwamura Memorial",
+                  contact: "9860025333",
+                ),
+                
+                Card(
+                  title: "Kathmandu Cancer Center",
+                  contact: "9841466550",
                 ),
                 Card(
-                  title: "Madhayapur Municipality",
-                  contact: "9851010714",
+                  title: "Madhayapur Hospital",
+                  contact: "9851133613",
                 ),
                 Card(
-                  title: "Changunarayan Municipality",
-                  contact: "9851214809",
+                  title: "Siddhi Smriti Hospital",
+                  contact: "9841204991",
                 ),
-                 Card(
-                  title: "Bhaktapur Red Cross",
+                SizedBox(height: 20,),
+                Text(
+                  'Red Cross',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Card(
+                  title: "Red Cross Bhaktapur",
                   contact: "9849857332",
                 ),
                 Card(
-                  title: "Changunarayan Red Cross",
-                  contact: "016622464",
+                  title: "Red Cross Changunarayan",
+                  contact: "01-6622464",
                 ),
                 Card(
-                  title: "Tathali Red Cross",
-                  contact: "9841233815",
-                ),
-                Card(
-                  title: "Nagarkot Samudaya Red Cross",
+                  title: "Red Cross Nagarkot Samudaya",
                   contact: "9741233600",
                 ),
                 Card(
-                  title: "Nalinchowk Red Cross",
+                  title: "Red Cross Nalinchowk",
                   contact: "9741208341",
+                ),
+                 Card(
+                  title: "Red Cross Tathali",
+                  contact: "9841233815",
+                ),
+                Card(
+                  title: "Red Cross Thimi",
+                  contact: "9849170256",
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Municipalities',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Card(
+                  title: "Municipality Bhaktapur",
+                  contact: "9851082799",
+                ),
+                Card(
+                  title: "Municipality Changunarayan",
+                  contact: "9851214809",
+                ),
+                Card(
+                  title: "Municipality Madhayapur",
+                  contact: "9851010714",
+                ),
+                
+                 SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'General Misc.',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Card(
                   title: "Aakhanda Sewa Samiti",
                   contact: "9841323296",
                 ),
                 Card(
+                  title: "Bhaktapur District Development Committee",
+                  contact: "9841395199",
+                ),
+                Card(
                   title: "Bramayani Sudal",
                   contact: "9843633744",
                 ),
                 Card(
-                  title: "Dr. Iwamura Memorial",
-                  contact: "9860025333",
+                  title: "Changu HealthPost",
+                  contact: "9849424813",
                 ),
                 Card(
-                  title: "Gramin Bikeash Purbadhar Kendra",
+                  title: "Gramin Bikash Purbadhar Kendra",
                   contact: "9841477794",
                 ),
                 Card(
                   title: "Harinam Sankritan Sewa Samiti",
                   contact: "9860355944",
-                ),
-                Card(
-                  title: "Kathmandu Cancer Center",
-                  contact: "9841466550",
-                ),
-                Card(
-                  title: "Siddhi Smriti Hospital",
-                  contact: "9841204991",
                 ),
                 Card(
                   title: "Sudal Bramahayani Bikash Kendra",

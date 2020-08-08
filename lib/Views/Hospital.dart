@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:swipedetector/swipedetector.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
+
 class Hospital extends StatefulWidget {
   @override
   _HospitalState createState() => _HospitalState();
@@ -84,9 +84,21 @@ class _HospitalState extends State<Hospital> {
                   title: "Iwamura M. Hospital",
                   contact: "01-6612695",
                 ),
-                 Card(
+                Card(
                   title: "Kanti Children's Hospital",
                   contact: "01-4414798",
+                ),
+                Card(
+                  title: "Kathmandu Cancer Hospital",
+                  contact: "01-5091629",
+                ),
+                Card(
+                  title: "KMC Hospital",
+                  contact: "01-6616568",
+                ),
+                Card(
+                  title: "Lokanthali Hospital",
+                  contact: "01-6631736",
                 ),
                 Card(
                   title: "Madhyapur Hospital",
@@ -105,6 +117,10 @@ class _HospitalState extends State<Hospital> {
                   contact: "01-6633442",
                 ),
                 Card(
+                  title: "Nepal Tuberculosis Control Center",
+                  contact: "01-6630706",
+                ),
+                Card(
                   title: "Patan Hospital",
                   contact: "01-5522266",
                 ),
@@ -112,9 +128,13 @@ class _HospitalState extends State<Hospital> {
                   title: "Prasuti Griha",
                   contact: "01-4411550",
                 ),
-                 Card(
+                Card(
                   title: "Sahid DharmaBhakta National Transplant Center",
                   contact: "01-6614709",
+                ),
+                Card(
+                  title: "Siddhi Memorial Women and Children Hospital",
+                  contact: "01-6612945",
                 ),
                 Card(
                   title: "Siddhi Smriti Hospital",
@@ -124,11 +144,22 @@ class _HospitalState extends State<Hospital> {
                   title: "Summit Hospital",
                   contact: "01-6631736",
                 ),
-                 Card(
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Health Post',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Card(
                   title: "Bagwati Sthan Janaswasthaya",
                   contact: "01-6612163",
                 ),
-                 Card(
+                Card(
                   title: "Byasi Janaswasthaya",
                   contact: "01-6610648",
                 ),
@@ -136,9 +167,17 @@ class _HospitalState extends State<Hospital> {
                   title: "Changu Primary Health Care",
                   contact: "9849424813",
                 ),
-                 Card(
+                Card(
                   title: "Chayamasingh Janaswasthaya",
                   contact: "01-6610317",
+                ),
+                Card(
+                  title: "District Community Eye Center",
+                  contact: "01-6618058",
+                ),
+                Card(
+                  title: "Madhyapur Health Care Center",
+                  contact: "01-6630316",
                 ),
               ],
             ),
@@ -150,8 +189,7 @@ class _HospitalState extends State<Hospital> {
 }
 
 class Card extends StatelessWidget {
-  Card({Key key, this.title, this.contact})
-      : super(key: key);
+  Card({Key key, this.title, this.contact}) : super(key: key);
   String title, contact;
 
   Future<void> _makePhoneCall(String url) async {
@@ -185,11 +223,17 @@ class Card extends StatelessWidget {
             this.title,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          subtitle: Text(this.contact,style: TextStyle(fontSize:16),),
-          trailing: Icon(FontAwesomeIcons.phone,color: Colors.green,),
+          subtitle: Text(
+            this.contact,
+            style: TextStyle(fontSize: 16),
+          ),
+          trailing: Icon(
+            FontAwesomeIcons.phone,
+            color: Colors.green,
+          ),
           onTap: () {
             print('Contact ');
-            _makePhoneCall('tel:'+this.contact);
+            _makePhoneCall('tel:' + this.contact);
           },
         ),
       ),
