@@ -1,14 +1,8 @@
-// import 'package:KhCE/Views/Enquiry.dart';
-// import 'package:KhCE/Views/Fee.dart';
-// import 'package:KhCE/Views/Map.dart';
-// import 'package:KhCE/Views/Panaroma.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:KhCE/Views/Scholarship.dart';
-// import 'package:KhCE/Views/KhwopaCircle.dart';
-// import 'package:KhCE/Views/AboutDeveloper.dart';
 import 'package:emergencyBhaktapur/Views/AboutDeveloper.dart';
+import 'package:emergencyBhaktapur/Views/Policy.dart';
+import 'package:emergencyBhaktapur/Views/Terms.dart';
 
 class CustomDrawer extends StatelessWidget {
   final Function closeDrawer;
@@ -54,6 +48,28 @@ class CustomDrawer extends StatelessWidget {
                 color: Colors.blue[700],
               ),
               title: Text("About Developer"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Policy()));
+              },
+              leading: Icon(
+                Icons.code,
+                color: Colors.blue[700],
+              ),
+              title: Text("Privacy Policy"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Terms()));
+              },
+              leading: Icon(
+                Icons.code,
+                color: Colors.blue[700],
+              ),
+              title: Text("Terms"),
             ),
             ListTile(
               onTap: () {

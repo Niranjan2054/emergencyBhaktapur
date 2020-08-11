@@ -161,7 +161,7 @@ class _AmbulanceState extends State<Ambulance> {
                 ),
                 Card(
                   title: "Aakhanda Sewa Samiti",
-                  contact: "9841323296",
+                  contact: "9741323296",
                 ),
                 Card(
                   title: "Bhaktapur District Development Committee",
@@ -181,7 +181,7 @@ class _AmbulanceState extends State<Ambulance> {
                 ),
                 Card(
                   title: "Harinam Sankritan Sewa Samiti",
-                  contact: "9860355944",
+                  contact: "9860335944",
                 ),
                 Card(
                   title: "Sudal Bramahayani Bikash Kendra",
