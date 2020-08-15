@@ -1,4 +1,4 @@
-package com.example.emergencyBhaktapur
+package com.techsamuha.emergencyBhaktapur
 
 import io.flutter.embedding.android.FlutterActivity
 
