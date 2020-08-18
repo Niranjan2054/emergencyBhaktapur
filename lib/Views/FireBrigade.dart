@@ -1,11 +1,11 @@
+import 'package:emergencyBhaktapur/Component/Phone_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'dart:async';
+
 class FireBrigade extends StatefulWidget {
   @override
   _FireBrigadeState createState() => _FireBrigadeState();
@@ -55,73 +55,25 @@ class _FireBrigadeState extends State<FireBrigade> {
                 SizedBox(
                   height: 20,
                 ),
-                Card(
+                PhoneCard(
                   title: "Fire Brigade",
                   contact: "101",
                 ),
-                Card(
+                PhoneCard(
                   title: "Bhaktapur",
                   contact: "01-6610649",
                 ),
-                Card(
+                PhoneCard(
                   title: "Kathmandu",
                   contact: "01-4221177",
                 ),
-                Card(
+                PhoneCard(
                   title: "Lalitpur",
                   contact: "01-5521111",
                 ),
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class Card extends StatelessWidget {
-  Card({Key key, this.title, this.contact})
-      : super(key: key);
-  String title, contact;
-
-  Future<void> _makePhoneCall(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        // height: 55,
-        margin: EdgeInsets.only(top: 10, bottom: 10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset.fromDirection(90, 3),
-              blurRadius: 5.0,
-            ),
-          ],
-        ),
-        child: ListTile(
-          title: Text(
-            this.title,
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          subtitle: Text(this.contact,style: TextStyle(fontSize:16),),
-          trailing: Icon(FontAwesomeIcons.phone,color: Colors.green,),
-          onTap: () {
-            print('Contact ');
-            _makePhoneCall('tel:'+this.contact);
-          },
         ),
       ),
     );

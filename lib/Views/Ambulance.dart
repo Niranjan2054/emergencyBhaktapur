@@ -1,11 +1,9 @@
+import 'package:emergencyBhaktapur/Component/Phone_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'dart:async';
 
 class Ambulance extends StatefulWidget {
   @override
@@ -64,27 +62,27 @@ class _AmbulanceState extends State<Ambulance> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Card(
+                PhoneCard(
                   title: "Bhaktapur Cancer Hospital",
                   contact: "9841539930",
                 ),
-                Card(
+                PhoneCard(
                   title: "Bhaktapur Hospital",
                   contact: "9840256340",
                 ),
-                Card(
+                PhoneCard(
                   title: "Dr. Iwamura Memorial",
                   contact: "9860025333",
                 ),
-                Card(
+                PhoneCard(
                   title: "Kathmandu Cancer Center",
                   contact: "9841466550",
                 ),
-                Card(
+                PhoneCard(
                   title: "Madhayapur Hospital",
                   contact: "9851133613",
                 ),
-                Card(
+                PhoneCard(
                   title: "Siddhi Smriti Hospital",
                   contact: "9841204991",
                 ),
@@ -99,27 +97,27 @@ class _AmbulanceState extends State<Ambulance> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Card(
+                PhoneCard(
                   title: "Red Cross Bhaktapur",
                   contact: "9849857332",
                 ),
-                Card(
+                PhoneCard(
                   title: "Red Cross Changunarayan",
                   contact: "01-6622464",
                 ),
-                Card(
+                PhoneCard(
                   title: "Red Cross Nagarkot Samudaya",
                   contact: "9741233600",
                 ),
-                Card(
+                PhoneCard(
                   title: "Red Cross Nalinchowk",
                   contact: "9741208341",
                 ),
-                Card(
+                PhoneCard(
                   title: "Red Cross Tathali",
                   contact: "9841233815",
                 ),
-                Card(
+                PhoneCard(
                   title: "Red Cross Thimi",
                   contact: "9849170256",
                 ),
@@ -134,15 +132,15 @@ class _AmbulanceState extends State<Ambulance> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Card(
+                PhoneCard(
                   title: "Municipality Bhaktapur",
                   contact: "9851082799",
                 ),
-                Card(
+                PhoneCard(
                   title: "Municipality Changunarayan",
                   contact: "9851214809",
                 ),
-                Card(
+                PhoneCard(
                   title: "Municipality Madhayapur",
                   contact: "9851010714",
                 ),
@@ -157,90 +155,37 @@ class _AmbulanceState extends State<Ambulance> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Card(
+                PhoneCard(
                   title: "Aakhanda Sewa Samiti",
                   contact: "9741323296",
                 ),
-                Card(
+                PhoneCard(
                   title: "Bhaktapur District Development Committee",
                   contact: "9841395199",
                 ),
-                Card(
+                PhoneCard(
                   title: "Bramayani Sudal",
                   contact: "9843633744",
                 ),
-                Card(
+                PhoneCard(
                   title: "Changu HealthPost",
                   contact: "9849424813",
                 ),
-                Card(
+                PhoneCard(
                   title: "Gramin Bikash Purbadhar Kendra",
                   contact: "9841477794",
                 ),
-                Card(
+                PhoneCard(
                   title: "Harinam Sankritan Sewa Samiti",
                   contact: "9860335944",
                 ),
-                Card(
+                PhoneCard(
                   title: "Sudal Bramahayani Bikash Kendra",
                   contact: "9843633744",
                 ),
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class Card extends StatelessWidget {
-  Card({Key key, this.title, this.contact}) : super(key: key);
-  String title, contact;
-
-  Future<void> _makePhoneCall(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        // height: 55,
-        margin: EdgeInsets.only(top: 10, bottom: 10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset.fromDirection(90, 3),
-              blurRadius: 5.0,
-            ),
-          ],
-        ),
-        child: ListTile(
-          title: Text(
-            this.title,
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          subtitle: Text(
-            this.contact,
-            style: TextStyle(fontSize: 16),
-          ),
-          trailing: Icon(
-            FontAwesomeIcons.phone,
-            color: Colors.green,
-          ),
-          onTap: () {
-            print('Contact ');
-            _makePhoneCall('tel:' + this.contact);
-          },
         ),
       ),
     );
