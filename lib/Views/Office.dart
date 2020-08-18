@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
-class Police extends StatefulWidget {
+class Office extends StatefulWidget {
   @override
-  _PoliceState createState() => _PoliceState();
+  _OfficeState createState() => _OfficeState();
 }
 
-class _PoliceState extends State<Police> {
+class _OfficeState extends State<Office> {
   FSBStatus drawerStatus;
 
   @override
@@ -20,33 +18,10 @@ class _PoliceState extends State<Police> {
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Police"),
+          child: Text("Government Office"),
         ),
-        leading: IconButton(
-            icon: Icon(
-              MaterialCommunityIcons.menu,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              setState(() {
-                drawerStatus = drawerStatus == FSBStatus.FSB_OPEN
-                    ? FSBStatus.FSB_CLOSE
-                    : FSBStatus.FSB_OPEN;
-              });
-            }),
-        automaticallyImplyLeading: false,
       ),
-      body: FoldableSidebarBuilder(
-        drawerBackgroundColor: Colors.white,
-        status: drawerStatus,
-        drawer: CustomDrawer(
-          closeDrawer: () {
-            setState(() {
-              drawerStatus = FSBStatus.FSB_CLOSE;
-            });
-          },
-        ),
-        screenContents: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Container(
             width: MediaQuery.of(context).size.width - 20,
             margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
@@ -56,30 +31,65 @@ class _PoliceState extends State<Police> {
                   height: 20,
                 ),
                 Card(
-                  title: "Police",
-                  contact: "100",
+                  title: "Bhaktapur Administration Office(CDO)",
+                  contact: "01-6614437",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Parisar -Bhaktapur ",
-                  contact: "9851283020",
+                  title: "Bhaktapur District Court",
+                  contact: "01-6620673",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Parisar -Bhaktapur (Notice)",
-                  contact: "9851114821",
+                  title: "District Co-ordination Committee Office, Bhaktapur",
+                  contact: "01-6610970",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Bit, Thimi",
-                  contact: "9851283599",
+                  title: "District Development Committee Office, Bhaktapur",
+                  contact: "01-6614826",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Bit, Jagati",
-                  contact: "9851283028",
+                  title: "District Election Office, Bhaktapur",
+                  contact: "01-6614525",
+                ),
+                Card(
+                  title: "District ayuktiko Office, Bhaktapur",
+                  contact: "01-6610123",
+                ),
+                Card(
+                  title: "District Prabhidhik Office, Bhaktapur",
+                  contact: "01-6614854",
+                ),
+                Card(
+                  title: "Malpot Office, Bhaktapur",
+                  contact: "01-6619936",
+                ),
+                Card(
+                  title: "Ministry of Urban Development Central Level Project Implementation Unit, Bhaktapur",
+                  contact: "01-6612775",
+                ),
+                Card(
+                  title: "Transport Management Office, Bhaktapur",
+                  contact: "01-6615211",
+                ),
+                Card(
+                  title: "Nepal Electricity Authority Training Center , Kharipati",
+                  contact: "01-6616660",
+                ),
+                Card(
+                  title: "Nepal Electricity Authority Environment and Social Studies Department, Kharipati",
+                  contact: "01-6611580",
+                ),
+                Card(
+                  title: "Office of the Controller of Examinations, Sanothimi",
+                  contact: "01-6630070",
+                ),
+                Card(
+                  title: "CTEVT Exam Controller Office, Sanothimi",
+                  contact: "01-6630408",
                 ),
               ],
             ),
           ),
         ),
-      ),
     );
   }
 }

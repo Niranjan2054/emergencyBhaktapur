@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
-class Police extends StatefulWidget {
+class Blood extends StatefulWidget {
   @override
-  _PoliceState createState() => _PoliceState();
+  _BloodState createState() => _BloodState();
 }
 
-class _PoliceState extends State<Police> {
+class _BloodState extends State<Blood> {
   FSBStatus drawerStatus;
 
   @override
@@ -20,33 +18,10 @@ class _PoliceState extends State<Police> {
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Police"),
+          child: Text("Blood Banks"),
         ),
-        leading: IconButton(
-            icon: Icon(
-              MaterialCommunityIcons.menu,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              setState(() {
-                drawerStatus = drawerStatus == FSBStatus.FSB_OPEN
-                    ? FSBStatus.FSB_CLOSE
-                    : FSBStatus.FSB_OPEN;
-              });
-            }),
-        automaticallyImplyLeading: false,
       ),
-      body: FoldableSidebarBuilder(
-        drawerBackgroundColor: Colors.white,
-        status: drawerStatus,
-        drawer: CustomDrawer(
-          closeDrawer: () {
-            setState(() {
-              drawerStatus = FSBStatus.FSB_CLOSE;
-            });
-          },
-        ),
-        screenContents: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Container(
             width: MediaQuery.of(context).size.width - 20,
             margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
@@ -56,30 +31,42 @@ class _PoliceState extends State<Police> {
                   height: 20,
                 ),
                 Card(
-                  title: "Police",
-                  contact: "100",
+                  title: "Bhaktapur",
+                  contact: "01-6612266",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Parisar -Bhaktapur ",
-                  contact: "9851283020",
+                  title: "Kalimati",
+                  contact: "01-4288485",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Parisar -Bhaktapur (Notice)",
-                  contact: "9851114821",
+                  title: "Pulchowk",
+                  contact: "01-5527033",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Bit, Thimi",
-                  contact: "9851283599",
+                  title: "Solti Road",
+                  contact: "01-4288486",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Bit, Jagati",
-                  contact: "9851283028",
+                  title: "Nobel Hospital (Sinamangal)",
+                  contact: "01-4110842",
                 ),
+                Card(
+                  title: "Banepa",
+                  contact: "011-661431",
+                ),
+                Card(
+                  title: "Gangalal Hospital",
+                  contact: "01-4371374",
+                ),
+                Card(
+                  title: "Teaching Hospital",
+                  contact: "01-4412303",
+                ),
+               
               ],
             ),
           ),
         ),
-      ),
     );
   }
 }

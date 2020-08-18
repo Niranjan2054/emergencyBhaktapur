@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
-class Police extends StatefulWidget {
+class Covid extends StatefulWidget {
   @override
-  _PoliceState createState() => _PoliceState();
+  _CovidState createState() => _CovidState();
 }
 
-class _PoliceState extends State<Police> {
+class _CovidState extends State<Covid> {
   FSBStatus drawerStatus;
 
   @override
@@ -20,33 +18,10 @@ class _PoliceState extends State<Police> {
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Police"),
+          child: Text("Covid 19"),
         ),
-        leading: IconButton(
-            icon: Icon(
-              MaterialCommunityIcons.menu,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              setState(() {
-                drawerStatus = drawerStatus == FSBStatus.FSB_OPEN
-                    ? FSBStatus.FSB_CLOSE
-                    : FSBStatus.FSB_OPEN;
-              });
-            }),
-        automaticallyImplyLeading: false,
       ),
-      body: FoldableSidebarBuilder(
-        drawerBackgroundColor: Colors.white,
-        status: drawerStatus,
-        drawer: CustomDrawer(
-          closeDrawer: () {
-            setState(() {
-              drawerStatus = FSBStatus.FSB_CLOSE;
-            });
-          },
-        ),
-        screenContents: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Container(
             width: MediaQuery.of(context).size.width - 20,
             margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
@@ -56,30 +31,45 @@ class _PoliceState extends State<Police> {
                   height: 20,
                 ),
                 Card(
-                  title: "Police",
-                  contact: "100",
+                  title: "MOHP Hot Line (6am - 10pm)",
+                  contact: "1115",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Parisar -Bhaktapur ",
-                  contact: "9851283020",
+                  title: "MOHP Hot Line (24 Hrs)",
+                  contact: "1133",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Parisar -Bhaktapur (Notice)",
-                  contact: "9851114821",
+                  title: "NPHL Teku",
+                  contact: "01-4252421",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Bit, Thimi",
-                  contact: "9851283599",
+                  title: "MOHP (8am - 8pm)",
+                  contact: "9851255834",
                 ),
                 Card(
-                  title: "Mahanagariya Prahari Bit, Jagati",
-                  contact: "9851283028",
+                  title: "MOHP (8am - 8pm)",
+                  contact: "9851255837",
+                ),
+                Card(
+                  title: "MOHP (8am - 8pm)",
+                  contact: "9851255839",
+                ),
+                Card(
+                  title: "Bhaktapur Hospital",
+                  contact: "01-6610798",
+                ),
+                Card(
+                  title: "Nepal Korea Friendship Hospital ",
+                  contact: "01-6633442",
+                ),
+                Card(
+                  title: "Janaswasthya Karyalaye, Katunje",
+                  contact: "01-6615271",
                 ),
               ],
             ),
           ),
         ),
-      ),
     );
   }
 }
