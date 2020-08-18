@@ -1,4 +1,7 @@
 import 'package:emergencyBhaktapur/Component/Phone_card.dart';
+import 'package:emergencyBhaktapur/classes/language.dart';
+import 'package:emergencyBhaktapur/localization/localization_constants.dart';
+import 'package:emergencyBhaktapur/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
@@ -14,14 +17,64 @@ class FireBrigade extends StatefulWidget {
 class _FireBrigadeState extends State<FireBrigade> {
   FSBStatus drawerStatus;
 
+  void _changeLanguage(Language language) {
+    Locale _temp;
+    switch (language.languageCode) {
+      case 'en':
+        print("english");
+        _temp = Locale(language.languageCode, 'US');
+        print(_temp);
+
+        break;
+      case 'ne':
+        _temp = Locale(language.languageCode, 'NP');
+        print(_temp);
+
+        break;
+      default:
+        _temp = Locale(language.languageCode, 'US');
+    }
+
+    EmergencyApp.setLocale(context, _temp);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Fire Brigade"),
+          child: Text(getTranslated(context, 'tab_fire')),
         ),
+        actions: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(right: 10.0),
+              child: DropdownButton(
+                  underline: SizedBox(),
+                  icon: Icon(
+                    Icons.language,
+                    color: Colors.white,
+                  ),
+                  items: Language.languageList()
+                      .map<DropdownMenuItem<Language>>((lang) =>
+                          DropdownMenuItem(
+                            value: lang,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: <Widget>[
+                                Text(
+                                  lang.name,
+                                  style: TextStyle(fontSize: 30.0),
+                                ),
+                                Text(lang.flag),
+                              ],
+                            ),
+                          ))
+                      .toList(),
+                  onChanged: (Language language) {
+                    _changeLanguage(language);
+                  })),
+        ],
         leading: IconButton(
             icon: Icon(
               MaterialCommunityIcons.menu,

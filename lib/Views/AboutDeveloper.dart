@@ -9,20 +9,26 @@ Future<void> _makePhoneCall(String url) async {
     throw 'Could not launch $url';
   }
 }
-Future<void> _launchInBrowser(String url) async {
-    if (await canLaunch(url)) {
-      await launch(
-        url,
-        forceSafariVC: false,
-        forceWebView: false,
-        headers: <String, String>{'my_header_key': 'my_header_value'},
-      );
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 
-class AboutDeveloper extends StatelessWidget {
+Future<void> _launchInBrowser(String url) async {
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceSafariVC: false,
+      forceWebView: false,
+      headers: <String, String>{'my_header_key': 'my_header_value'},
+    );
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+class AboutDeveloper extends StatefulWidget {
+  @override
+  _AboutDeveloperState createState() => _AboutDeveloperState();
+}
+
+class _AboutDeveloperState extends State<AboutDeveloper> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,33 +40,33 @@ class AboutDeveloper extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
           child: Column(
-            children: <Widget>[              
+            children: <Widget>[
               DeveloperCard(
                 name: "Bikesh Sitikhu",
-                college:"KhCE",  
-                email:"sitikhubikesh@gmail.com",        
-                phone: '9860117649',      
+                college: "KhCE",
+                email: "sitikhubikesh@gmail.com",
+                phone: '9860117649',
                 image: "assets/images/developers/bikesh.jpg",
               ),
               DeveloperCard(
-                name: "Luja Shakya",                
-                college:"KhCE",
-                phone: '9860685929',      
-                email:"shakyaluja445@gmail.com",                
+                name: "Luja Shakya",
+                college: "KhCE",
+                phone: '9860685929',
+                email: "shakyaluja445@gmail.com",
                 image: "assets/images/developers/luja.jpg",
               ),
               DeveloperCard(
                 name: "Niranjan Bekoju",
-                college:"KhCE",
-                phone: '9843803828',      
-                email:"bekojuniranjan@gmail.com",
+                college: "KhCE",
+                phone: '9843803828',
+                email: "bekojuniranjan@gmail.com",
                 image: "assets/images/developers/niranjan.jpg",
               ),
               DeveloperCard(
                 name: "Sunil Banmala",
-                college:"KhCE",
-                phone: '9840521409',      
-                email:"sunilbanmala0@gmail.com",
+                college: "KhCE",
+                phone: '9840521409',
+                email: "sunilbanmala0@gmail.com",
                 image: "assets/images/developers/sunil.jpg",
               ),
             ],
@@ -72,8 +78,10 @@ class AboutDeveloper extends StatelessWidget {
 }
 
 class DeveloperCard extends StatelessWidget {
-  DeveloperCard({Key key, this.name, this.college,this.email,this.phone, this.image}) : super(key: key);
-  String name, crn, image,college,email,phone;
+  DeveloperCard(
+      {Key key, this.name, this.college, this.email, this.phone, this.image})
+      : super(key: key);
+  String name, crn, image, college, email, phone;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -96,23 +104,21 @@ class DeveloperCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Center(
-                        child: Text(                        
+                        child: Text(
                           this.name,
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 20),
                         ),
                       ),
                       Divider(),
-                      Row(                        
-                        children: <Widget>[   
-                                                 
+                      Row(
+                        children: <Widget>[
                           IconButton(
-                            icon: FaIcon(FontAwesomeIcons.university), 
-                            onPressed: () { 
-                              _launchInBrowser('https://khwopa.edu.np/');
-                            }
-                          ),
-                          Text(                            
+                              icon: FaIcon(FontAwesomeIcons.university),
+                              onPressed: () {
+                                _launchInBrowser('https://khwopa.edu.np/');
+                              }),
+                          Text(
                             this.college,
                             maxLines: 1,
                           ),
@@ -121,11 +127,10 @@ class DeveloperCard extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           IconButton(
-                            icon: FaIcon(FontAwesomeIcons.envelope), 
-                            onPressed: () { 
-                              launch("mailto:"+this.email);
-                            }
-                          ),
+                              icon: FaIcon(FontAwesomeIcons.envelope),
+                              onPressed: () {
+                                launch("mailto:" + this.email);
+                              }),
                           Text(
                             this.email,
                             maxLines: 1,
@@ -135,11 +140,10 @@ class DeveloperCard extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           IconButton(
-                            icon: FaIcon(FontAwesomeIcons.phone), 
-                            onPressed: () { 
-                              _makePhoneCall('tel:'+this.phone);
-                            }
-                          ),
+                              icon: FaIcon(FontAwesomeIcons.phone),
+                              onPressed: () {
+                                _makePhoneCall('tel:' + this.phone);
+                              }),
                           Text(
                             this.phone,
                             maxLines: 1,
@@ -151,29 +155,24 @@ class DeveloperCard extends StatelessWidget {
                 ),
                 Container(
                   width: 80,
-                  margin: EdgeInsets.only(right: 10,left:10),
-
+                  margin: EdgeInsets.only(right: 10, left: 10),
                   decoration: BoxDecoration(
                     boxShadow: [
-
                       BoxShadow(
                         color: Colors.grey,
                         offset: Offset.fromDirection(90, 3),
                         blurRadius: 10.0,
-
                       ),
                     ],
                   ),
-                  
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
-                    child:Image.asset(this.image),
-                      
-                  ),),
+                    child: Image.asset(this.image),
+                  ),
+                ),
               ],
             ),
-          )
-          ),
+          )),
     );
   }
 }

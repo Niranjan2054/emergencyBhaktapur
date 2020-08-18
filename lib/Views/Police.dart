@@ -1,4 +1,7 @@
 import 'package:emergencyBhaktapur/Component/Phone_card.dart';
+import 'package:emergencyBhaktapur/classes/language.dart';
+import 'package:emergencyBhaktapur/localization/localization_constants.dart';
+import 'package:emergencyBhaktapur/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
@@ -14,13 +17,34 @@ class Police extends StatefulWidget {
 class _PoliceState extends State<Police> {
   FSBStatus drawerStatus;
 
+  void _changeLanguage(Language language) {
+    Locale _temp;
+    switch (language.languageCode) {
+      case 'en':
+        print("english");
+        _temp = Locale(language.languageCode, 'US');
+        print(_temp);
+
+        break;
+      case 'ne':
+        _temp = Locale(language.languageCode, 'NP');
+        print(_temp);
+
+        break;
+      default:
+        _temp = Locale(language.languageCode, 'US');
+    }
+
+    EmergencyApp.setLocale(context, _temp);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Police"),
+          child: Text(getTranslated(context, 'tab_police')),
         ),
         actions: <Widget>[
           IconButton(

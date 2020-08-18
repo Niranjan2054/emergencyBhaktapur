@@ -1,28 +1,36 @@
-// import 'package:KhCE/Views/Enquiry.dart';
-// import 'package:KhCE/Views/KhwopaCircle.dart';
-// import 'package:KhCE/Views/Panaroma.dart';
+import 'dart:async';
+import 'package:emergencyBhaktapur/localization/demo_localization.dart';
+import 'package:emergencyBhaktapur/routes/custom_router.dart';
+import 'package:emergencyBhaktapur/routes/route_names.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'Views/Home.dart';
 import 'package:emergencyBhaktapur/Views/Home.dart';
+
 void main() {
-  runApp(MyApp());
+  runApp(EmergencyApp());
 }
 
-Map<int, Color> color = {
-  50: Color.fromRGBO(19, 54, 153, .1),
-  100: Color.fromRGBO(19, 54, 153, .2),
-  200: Color.fromRGBO(19, 54, 153, .3),
-  300: Color.fromRGBO(19, 54, 153, .4),
-  400: Color.fromRGBO(19, 54, 153, .5),
-  500: Color.fromRGBO(19, 54, 153, .6),
-  600: Color.fromRGBO(19, 54, 153, .7),
-  700: Color.fromRGBO(19, 54, 153, .8),
-  800: Color.fromRGBO(19, 54, 153, .9),
-  900: Color.fromRGBO(19, 54, 153, 1),
-};
-MaterialColor AppThemeColor = MaterialColor(0xFF133699, color);
+class EmergencyApp extends StatefulWidget {
+  static void setLocale(BuildContext context, Locale locale) {
+    _EmergencyAppState state =
+        context.findAncestorStateOfType<_EmergencyAppState>();
+    state.setLocale(locale);
+  }
 
-class MyApp extends StatelessWidget {
+  @override
+  _EmergencyAppState createState() => _EmergencyAppState();
+}
+
+class _EmergencyAppState extends State<EmergencyApp> {
+  Locale _locale;
+
+  void setLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,15 +39,31 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      locale: _locale,
       darkTheme: ThemeData.dark(),
-      home: Scaffold(
-        body: Home(),
-      ),
-      // routes: <String, WidgetBuilder>{
-      //   '/enquiry': (BuildContext context) => Enquiry(),
-      //   '/college_view': (BuildContext context) => Panaroma(),
-      //   '/khwopa_circle': (BuildContext context) => KhwopaCircle(),
-      // },
+      onGenerateRoute: CustomRouter.allRoutes,
+      initialRoute: homeRoute,
+      localizationsDelegates: [
+        DemoLocalization.delegate,
+        //provides localised strings
+        GlobalMaterialLocalizations.delegate,
+        //provides RTL support
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale("en", "US"),
+        Locale("ne", "NP"),
+      ],
+      localeResolutionCallback: (deviceLocale, supportedLocales) {
+        for (var locale in supportedLocales) {
+          if (locale.languageCode == deviceLocale.languageCode &&
+              locale.countryCode == deviceLocale.countryCode) {
+            return deviceLocale;
+          }
+        }
+        return supportedLocales.first;
+      },
     );
   }
 }
