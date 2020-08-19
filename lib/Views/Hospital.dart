@@ -17,24 +17,8 @@ class Hospital extends StatefulWidget {
 class _HospitalState extends State<Hospital> {
   FSBStatus drawerStatus;
 
-  void _changeLanguage(Language language) {
-    Locale _temp;
-    switch (language.languageCode) {
-      case 'en':
-        print("english");
-        _temp = Locale(language.languageCode, 'US');
-        print(_temp);
-
-        break;
-      case 'ne':
-        _temp = Locale(language.languageCode, 'NP');
-        print(_temp);
-
-        break;
-      default:
-        _temp = Locale(language.languageCode, 'US');
-    }
-
+  void _changeLanguage(Language language) async {
+    Locale _temp = await setLocale(language.languageCode);
     EmergencyApp.setLocale(context, _temp);
   }
 

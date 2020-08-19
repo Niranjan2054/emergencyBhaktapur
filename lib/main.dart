@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:emergencyBhaktapur/localization/demo_localization.dart';
+import 'package:emergencyBhaktapur/localization/localization_constants.dart';
 import 'package:emergencyBhaktapur/routes/custom_router.dart';
 import 'package:emergencyBhaktapur/routes/route_names.dart';
 import 'package:flutter/material.dart';
@@ -32,38 +33,56 @@ class _EmergencyAppState extends State<EmergencyApp> {
   }
 
   @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    getLocale().then((locale) {
+      setState(() {
+        this._locale = locale;
+      });
+    });
+    super.didChangeDependencies();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Emergency Bhaktapur',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      locale: _locale,
-      darkTheme: ThemeData.dark(),
-      onGenerateRoute: CustomRouter.allRoutes,
-      initialRoute: homeRoute,
-      localizationsDelegates: [
-        DemoLocalization.delegate,
-        //provides localised strings
-        GlobalMaterialLocalizations.delegate,
-        //provides RTL support
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: [
-        Locale("en", "US"),
-        Locale("ne", "NP"),
-      ],
-      localeResolutionCallback: (deviceLocale, supportedLocales) {
-        for (var locale in supportedLocales) {
-          if (locale.languageCode == deviceLocale.languageCode &&
-              locale.countryCode == deviceLocale.countryCode) {
-            return deviceLocale;
+    if (_locale == null) {
+      return Container(
+          child: Center(
+        child: CircularProgressIndicator(),
+      ));
+    } else {
+      return MaterialApp(
+        title: 'Emergency Bhaktapur',
+        theme: ThemeData(
+          primarySwatch: Colors.red,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        locale: _locale,
+        darkTheme: ThemeData.dark(),
+        onGenerateRoute: CustomRouter.allRoutes,
+        initialRoute: homeRoute,
+        localizationsDelegates: [
+          DemoLocalization.delegate,
+          //provides localised strings
+          GlobalMaterialLocalizations.delegate,
+          //provides RTL support
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: [
+          Locale("en", "US"),
+          Locale("ne", "NP"),
+        ],
+        localeResolutionCallback: (deviceLocale, supportedLocales) {
+          for (var locale in supportedLocales) {
+            if (locale.languageCode == deviceLocale.languageCode &&
+                locale.countryCode == deviceLocale.countryCode) {
+              return deviceLocale;
+            }
           }
-        }
-        return supportedLocales.first;
-      },
-    );
+          return supportedLocales.first;
+        },
+      );
+    }
   }
 }

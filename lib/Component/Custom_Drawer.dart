@@ -1,3 +1,4 @@
+import 'package:emergencyBhaktapur/Views/LanguageSelection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:emergencyBhaktapur/Views/AboutDeveloper.dart';
@@ -43,9 +44,22 @@ class CustomDrawer extends StatelessWidget {
               },
               leading: Icon(
                 Icons.code,
-                color: Colors.blue[700],
+                color: Colors.red[700],
               ),
               title: Text("About Developer"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => LanguageSelection()));
+              },
+              leading: Icon(
+                Icons.language,
+                color: Colors.red[800],
+              ),
+              title: Text("Language"),
             ),
             ListTile(
               onTap: () {
@@ -53,7 +67,7 @@ class CustomDrawer extends StatelessWidget {
               },
               leading: Icon(
                 Icons.exit_to_app,
-                color: Colors.blue[800],
+                color: Colors.red[800],
               ),
               title: Text("Exit"),
             ),
