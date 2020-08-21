@@ -6,8 +6,6 @@ import 'package:emergencyBhaktapur/Component/Button_Navigation_Bar.dart' as bnb;
 import 'package:emergencyBhaktapur/Views/Ambulance.dart';
 import 'package:emergencyBhaktapur/Views/Hospital.dart';
 import 'package:emergencyBhaktapur/Views/ContactList.dart';
-import 'package:emergencyBhaktapur/Views/Police.dart';
-import 'package:emergencyBhaktapur/Views/SabBahan.dart';
 import 'package:swipedetector/swipedetector.dart';
 
 class Home extends StatefulWidget {
@@ -71,9 +69,9 @@ class _HomeState extends State<Home> {
             children: <Widget>[
               Ambulance(),
               Hospital(),
-              ContactList(st:'db',appBar: 'Fire Brigade',appBarNepali: 'दमकल',),
-              Police(),
-              SabBahan(),
+              ContactList(st:'fireBrigade',appBar: 'Fire Brigade',appBarNepali: 'दमकल',),
+              ContactList(st:'police',appBar: 'Police',appBarNepali: 'पुलिस',),
+              ContactList(st:'sabbahan',appBar: 'Sab Bahan',appBarNepali: 'शवबाहन',),
             ],
           ),
         ),

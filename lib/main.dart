@@ -6,10 +6,14 @@ void main() {
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
-  APIRequest apiRequest = new APIRequest();
+  APIRequest apiRequest1 = new APIRequest(st: 'fireBrigade',apiUrl: 'http://neofusionsoc.com/fireBrigade');
+  APIRequest apiRequest2 = new APIRequest(st: 'police',apiUrl: 'http://neofusionsoc.com/police');
+  APIRequest apiRequest3 = new APIRequest(st: 'sabbahan',apiUrl: 'http://neofusionsoc.com/sabbahan');
   @override
   Widget build(BuildContext context) {
-    apiRequest.getData();
+    apiRequest1.getData();
+    apiRequest2.getData();
+    apiRequest3.getData();
     return MaterialApp(
       title: 'Emergency Bhaktapur',
       theme: ThemeData(
