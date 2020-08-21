@@ -6,6 +6,7 @@ import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:emergencyBhaktapur/Component/ContactCard.dart';
+import 'package:emergencyBhaktapur/globals.dart' as globals;
 
 class FireBrigade extends StatefulWidget {
   @override
@@ -18,11 +19,13 @@ class _FireBrigadeState extends State<FireBrigade> {
   int length = 0;
   List jsonFire;
 
+  bool isNep;
+
   void getData() async {
     storage.readData().then((String value) {
       setState(() {
         print(value);
-        this.jsonFire=jsonDecode(value);
+        this.jsonFire = jsonDecode(value);
         this.length = jsonFire.length;
         print(this.length);
       });
@@ -33,6 +36,14 @@ class _FireBrigadeState extends State<FireBrigade> {
   void initState() {
     super.initState();
     getData();
+    isNep = globals.isNepali;
+  }
+
+  void toggleLanguage() {
+    setState(() {
+      isNep = !isNep;
+      globals.isNepali = isNep;
+    });
   }
 
   @override
@@ -41,8 +52,78 @@ class _FireBrigadeState extends State<FireBrigade> {
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Notice"),
+          child: Text("Fire Brigade"),
         ),
+        actions: <Widget>[
+         
+          Container(
+            height: 30,
+            padding: EdgeInsets.only(top:15,left: 5),
+            child: Text(
+              '🇺🇸',
+              style: TextStyle(
+                fontSize: 28,
+
+              ),
+            ),
+          ),
+          AnimatedContainer(
+            height: 40,
+            width: 100,
+            duration: Duration(
+              milliseconds: 500,
+            ),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40.0),
+                color: Colors.white70,
+                border: Border.all(
+                  color: Colors.red,
+                  width: 8,
+                )),
+            child: Stack(
+              children: <Widget>[
+                AnimatedPositioned(
+                  child: InkWell(
+                    onTap: toggleLanguage,
+                    child: AnimatedSwitcher(
+                        duration: Duration(milliseconds: 500),
+                        child: this.isNep
+                            ? Icon(
+                                Icons.check_circle,
+                                color: Colors.red,
+                                size: 35,
+                                key: UniqueKey(),
+                              )
+                            : Icon(
+                                Icons.check_circle,
+                                color: Colors.red,
+                                size: 35,
+                                key: UniqueKey(),
+                              )),
+                  ),
+                  duration: Duration(
+                    milliseconds: 500,
+                  ),
+                  curve: Curves.easeIn,
+                  top: 3,
+                  left: this.isNep ? 45 : 5,
+                  right: this.isNep ? 20 : 60,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            height: 30,
+            padding: EdgeInsets.only(top:15,left: 5),
+            child: Text(
+              '🇳🇵',
+              style: TextStyle(
+                fontSize: 28,
+
+              ),
+            ),
+          ),
+        ],
         leading: IconButton(
             icon: Icon(
               MaterialCommunityIcons.menu,
