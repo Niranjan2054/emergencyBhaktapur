@@ -8,13 +8,19 @@ import 'package:emergencyBhaktapur/Component/Custom_Drawer.dart';
 import 'package:emergencyBhaktapur/Component/ContactCard.dart';
 import 'package:emergencyBhaktapur/globals.dart' as globals;
 
-class FireBrigade extends StatefulWidget {
+class ContactList extends StatefulWidget {
+  ContactList({Key key, this.st,this.appBar, this.appBarNepali})
+      : super(key: key);
+  String st,appBar,appBarNepali;
   @override
-  _FireBrigadeState createState() => _FireBrigadeState();
+  _ContactListState createState() => _ContactListState(st: this.st,appBar: this.appBar,appBarNepali: this.appBarNepali);
 }
 
-class _FireBrigadeState extends State<FireBrigade> {
-  Storage storage = new Storage('db');
+class _ContactListState extends State<ContactList> {
+  _ContactListState({Key key, this.st,this.appBar, this.appBarNepali});
+  String st,appBar,appBarNepali;
+
+  Storage storage;
   FSBStatus drawerStatus;
   int length = 0;
   List jsonFire;
@@ -22,6 +28,7 @@ class _FireBrigadeState extends State<FireBrigade> {
   bool isNep;
 
   void getData() async {
+    storage = new Storage(this.st);
     storage.readData().then((String value) {
       setState(() {
         print(value);
@@ -52,7 +59,7 @@ class _FireBrigadeState extends State<FireBrigade> {
       appBar: AppBar(
         title: Container(
           height: 30,
-          child: Text("Fire Brigade"),
+          child: this.isNep?Text(this.appBarNepali):Text(this.appBar)
         ),
         actions: <Widget>[
          
