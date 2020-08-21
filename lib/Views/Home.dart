@@ -5,7 +5,7 @@ import 'package:move_to_background/move_to_background.dart';
 import 'package:emergencyBhaktapur/Component/Button_Navigation_Bar.dart' as bnb;
 import 'package:emergencyBhaktapur/Views/Ambulance.dart';
 import 'package:emergencyBhaktapur/Views/Hospital.dart';
-import 'package:emergencyBhaktapur/Views/FireBrigade.dart';
+import 'package:emergencyBhaktapur/Views/FireBrigadeAPI.dart';
 import 'package:emergencyBhaktapur/Views/Police.dart';
 import 'package:emergencyBhaktapur/Views/SabBahan.dart';
 import 'package:swipedetector/swipedetector.dart';
