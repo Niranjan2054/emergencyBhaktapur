@@ -166,12 +166,26 @@ class _ContactListState extends State<ContactList> {
                         this.jsonFire[index]['contact'] != null) &&
                     (this.jsonFire[index]['title'] != "" &&
                         this.jsonFire[index]['title'] != null)) {
-                  return ContactCard(
-                    title: this.jsonFire[index]['title'],
-                    title_nep: this.jsonFire[index]['title_nep'],
-                    contact: this.jsonFire[index]['contact'],
-                    contact_nep: this.jsonFire[index]['contact_nep'],
-                  );
+                          if(this.jsonFire[index]['isTitle']){
+                            return ContactCard(
+                              title: this.jsonFire[index]['title'],
+                              title_nep: this.jsonFire[index]['title_nep'],
+                              contact: this.jsonFire[index]['contact'],
+                              contact_nep: this.jsonFire[index]['contact_nep'],
+                            );
+                          }else{
+                            return Container(
+                              margin: EdgeInsets.only(top:20),
+                              child: Text(
+                                this.isNep?this.jsonFire[index]['title']:this.jsonFire[index]['title_nep'],
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            );
+                          }
                 } else {
                   return SizedBox(
                     height: 0,
