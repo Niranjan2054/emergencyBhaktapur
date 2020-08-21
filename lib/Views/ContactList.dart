@@ -31,10 +31,8 @@ class _ContactListState extends State<ContactList> {
     storage = new Storage(this.st);
     storage.readData().then((String value) {
       setState(() {
-        print(value);
         this.jsonFire = jsonDecode(value);
         this.length = jsonFire.length;
-        print(this.length);
       });
     });
   }
@@ -166,7 +164,7 @@ class _ContactListState extends State<ContactList> {
                         this.jsonFire[index]['contact'] != null) &&
                     (this.jsonFire[index]['title'] != "" &&
                         this.jsonFire[index]['title'] != null)) {
-                          if(this.jsonFire[index]['isTitle']){
+                          if(this.jsonFire[index]['isTitle'] == '0'){
                             return ContactCard(
                               title: this.jsonFire[index]['title'],
                               title_nep: this.jsonFire[index]['title_nep'],
@@ -177,12 +175,13 @@ class _ContactListState extends State<ContactList> {
                             return Container(
                               margin: EdgeInsets.only(top:20),
                               child: Text(
-                                this.isNep?this.jsonFire[index]['title']:this.jsonFire[index]['title_nep'],
+                                this.isNep?this.jsonFire[index]['title_nep']:this.jsonFire[index]['title'],
                                 style: TextStyle(
                                   color: Colors.red,
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
                                 ),
+                                textAlign: TextAlign.center,
                               ),
                             );
                           }

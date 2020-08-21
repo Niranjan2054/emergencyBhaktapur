@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
             scrollDirection: Axis.vertical,
             children: <Widget>[
               Ambulance(),
-              Hospital(),
+              ContactList(st:'hospital',appBar: 'Hospital',appBarNepali: 'हस्पिटल',),
               ContactList(st:'fireBrigade',appBar: 'Fire Brigade',appBarNepali: 'दमकल',),
               ContactList(st:'police',appBar: 'Police',appBarNepali: 'पुलिस',),
               ContactList(st:'sabbahan',appBar: 'Sab Bahan',appBarNepali: 'शवबाहन',),

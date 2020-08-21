@@ -6,10 +6,10 @@ void main() {
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
-  APIRequest apiRequest1 = new APIRequest(st: 'fireBrigade',apiUrl: 'https://raw.githubusercontent.com/Niranjan2054/emergencyBhaktapur/version_one/data/fireBrigade.php?token=AHZ7Z55XFPSPQDOJUMXTZZ27H6CRA');
+  APIRequest apiRequest1 = new APIRequest(st: 'fireBrigade',apiUrl: 'http://neofusionsoc.com/firebrigade');
   APIRequest apiRequest2 = new APIRequest(st: 'police',apiUrl: 'http://neofusionsoc.com/police');
   APIRequest apiRequest3 = new APIRequest(st: 'sabbahan',apiUrl: 'http://neofusionsoc.com/sabbahan');
-  APIRequest apiRequest4 = new APIRequest(st: 'sabbahan',apiUrl: 'http://neofusionsoc.com/sabbahan');
+  APIRequest apiRequest4 = new APIRequest(st: 'hospital',apiUrl: 'http://neofusionsoc.com/hospital');
   @override
   Widget build(BuildContext context) {
     apiRequest1.getData();
