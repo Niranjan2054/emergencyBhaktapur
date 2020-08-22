@@ -14,7 +14,6 @@ class APIRequest {
       },
     );
     if (response.statusCode == 200) {
-      print(response.body.toString());
       storage = new Storage(this.st);
       storage.writeData(response.body.toString());
     } else {

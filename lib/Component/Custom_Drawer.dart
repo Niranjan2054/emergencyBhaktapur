@@ -3,10 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:emergencyBhaktapur/Views/AboutDeveloper.dart';
 import 'package:emergencyBhaktapur/Views/Policy.dart';
 import 'package:emergencyBhaktapur/Views/Municipality.dart';
-import 'package:emergencyBhaktapur/Views/Covid.dart';
-import 'package:emergencyBhaktapur/Views/Office.dart';
-import 'package:emergencyBhaktapur/Views/Blood.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:emergencyBhaktapur/Views/ContactList.dart';
+import 'package:emergencyBhaktapur/globals.dart' as globals;
 
 class CustomDrawer extends StatelessWidget {
   final Function closeDrawer;
@@ -51,40 +50,40 @@ class CustomDrawer extends StatelessWidget {
                 Icons.location_city,
                 color: Colors.blue[700],
               ),
-              title: Text("Municipalties"),
+              title: globals.isNepali?Text("नगरपालिका"):Text("Municipalties")
             ),
             ListTile(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Covid()));
+                    MaterialPageRoute(builder: (context) => ContactList(st:'covid',appBar: 'Covid 19',appBarNepali: 'कोभिड-१९',isDrawer: false,)));
               },
               leading: Icon(
                 FontAwesomeIcons.virus,
                 color: Colors.blue[700],
               ),
-              title: Text("Covid 19"),
+              title: globals.isNepali?Text("कोभिड-१९"):Text("Covid 19"),
             ),
             ListTile(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Office()));
+                    MaterialPageRoute(builder: (context) => ContactList(st:'office',appBar: 'Government Office',appBarNepali: 'सरकारी कार्यालय',isDrawer: false,)));
               },
               leading: Icon(
                 FontAwesomeIcons.building,
                 color: Colors.blue[700],
               ),
-              title: Text("Government Office"),
+              title: globals.isNepali?Text("सरकारी कार्यालय"):Text("Government Office"),
             ),
             ListTile(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Blood()));
+                    MaterialPageRoute(builder: (context) => ContactList(st:'blood',appBar: 'Blood Banks',appBarNepali: 'ब्लड बैंक',isDrawer: false,)));
               },
               leading: Icon(
                 FontAwesomeIcons.handHoldingWater,
                 color: Colors.blue[700],
               ),
-              title: Text("Blood Banks"),
+              title: globals.isNepali?Text("ब्लड बैंक"):Text("Blood Banks"),
             ),
             ListTile(
               onTap: () {
@@ -95,7 +94,7 @@ class CustomDrawer extends StatelessWidget {
                 Icons.code,
                 color: Colors.blue[700],
               ),
-              title: Text("About Developer"),
+              title: globals.isNepali?Text("विकासकर्ता टोली"):Text("Developers Team"),
             ),
             ListTile(
               onTap: () {
@@ -106,7 +105,7 @@ class CustomDrawer extends StatelessWidget {
                 Icons.pages,
                 color: Colors.blue[700],
               ),
-              title: Text("Privacy Policy"),
+              title: globals.isNepali?Text("गोपनीयता नीति"):Text("Privacy Policy"),
             ),
             ListTile(
               onTap: () {
@@ -116,7 +115,7 @@ class CustomDrawer extends StatelessWidget {
                 Icons.exit_to_app,
                 color: Colors.blue[800],
               ),
-              title: Text("Exit"),
+              title: globals.isNepali?Text("बाहिर निस्कनुहोस्"):Text("Exit"),
             ),
           ],
         ),

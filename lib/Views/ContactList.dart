@@ -9,16 +9,24 @@ import 'package:emergencyBhaktapur/Component/ContactCard.dart';
 import 'package:emergencyBhaktapur/globals.dart' as globals;
 
 class ContactList extends StatefulWidget {
-  ContactList({Key key, this.st,this.appBar, this.appBarNepali})
+  ContactList(
+      {Key key, this.st, this.appBar, this.appBarNepali, this.isDrawer = true})
       : super(key: key);
-  String st,appBar,appBarNepali;
+  String st, appBar, appBarNepali;
+  bool isDrawer;
   @override
-  _ContactListState createState() => _ContactListState(st: this.st,appBar: this.appBar,appBarNepali: this.appBarNepali);
+  _ContactListState createState() => _ContactListState(
+      st: this.st,
+      appBar: this.appBar,
+      appBarNepali: this.appBarNepali,
+      isDrawer: this.isDrawer);
 }
 
 class _ContactListState extends State<ContactList> {
-  _ContactListState({Key key, this.st,this.appBar, this.appBarNepali});
-  String st,appBar,appBarNepali;
+  _ContactListState(
+      {Key key, this.st, this.appBar, this.appBarNepali, this.isDrawer});
+  String st, appBar, appBarNepali;
+  bool isDrawer;
 
   Storage storage;
   FSBStatus drawerStatus;
@@ -56,19 +64,16 @@ class _ContactListState extends State<ContactList> {
     return Scaffold(
       appBar: AppBar(
         title: Container(
-          height: 30,
-          child: this.isNep?Text(this.appBarNepali):Text(this.appBar)
-        ),
+            height: 30,
+            child: this.isNep ? Text(this.appBarNepali) : Text(this.appBar)),
         actions: <Widget>[
-         
           Container(
             height: 30,
-            padding: EdgeInsets.only(top:15,left: 5),
+            padding: EdgeInsets.only(top: 15, left: 5),
             child: Text(
               '🇺🇸',
               style: TextStyle(
                 fontSize: 28,
-
               ),
             ),
           ),
@@ -119,28 +124,32 @@ class _ContactListState extends State<ContactList> {
           ),
           Container(
             height: 30,
-            padding: EdgeInsets.only(top:15,left: 5),
+            padding: EdgeInsets.only(top: 15, left: 5),
             child: Text(
               '🇳🇵',
               style: TextStyle(
                 fontSize: 28,
-
               ),
             ),
           ),
         ],
-        leading: IconButton(
-            icon: Icon(
-              MaterialCommunityIcons.menu,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              setState(() {
-                drawerStatus = drawerStatus == FSBStatus.FSB_OPEN
-                    ? FSBStatus.FSB_CLOSE
-                    : FSBStatus.FSB_OPEN;
-              });
-            }),
+        leading: this.isDrawer
+            ? IconButton(
+                icon: Icon(
+                  MaterialCommunityIcons.menu,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  setState(() {
+                    drawerStatus = drawerStatus == FSBStatus.FSB_OPEN
+                        ? FSBStatus.FSB_CLOSE
+                        : FSBStatus.FSB_OPEN;
+                  });
+                })
+            : IconButton(
+                icon: Icon(Icons.arrow_back,size: 34,),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
         automaticallyImplyLeading: false,
       ),
       body: FoldableSidebarBuilder(
@@ -154,41 +163,39 @@ class _ContactListState extends State<ContactList> {
           },
         ),
         screenContents: Container(
-          width: MediaQuery.of(context).size.width - 20,
-          margin: EdgeInsets.fromLTRB(10, 5, 10, 0),
           child: ListView.builder(
             itemCount: this.length,
             itemBuilder: (BuildContext context, int index) {
               if (this.length != 0) {
                 if ((this.jsonFire[index]['contact'] != "" &&
-                        this.jsonFire[index]['contact'] != null) &&
-                    (this.jsonFire[index]['title'] != "" &&
-                        this.jsonFire[index]['title'] != null)) {
-                          if(this.jsonFire[index]['isTitle'] == '0'){
-                            return ContactCard(
-                              title: this.jsonFire[index]['title'],
-                              title_nep: this.jsonFire[index]['title_nep'],
-                              contact: this.jsonFire[index]['contact'],
-                              contact_nep: this.jsonFire[index]['contact_nep'],
-                            );
-                          }else{
-                            return Container(
-                              margin: EdgeInsets.only(top:20),
-                              child: Text(
-                                this.isNep?this.jsonFire[index]['title_nep']:this.jsonFire[index]['title'],
-                                style: TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            );
-                          }
+                    this.jsonFire[index]['contact'] != null)) {
+                  if ((this.jsonFire[index]['title'] != "" &&
+                      this.jsonFire[index]['title'] != null)) {
+                    return ContactCard(
+                      title: this.jsonFire[index]['title'],
+                      title_nep: this.jsonFire[index]['title_nep'],
+                      contact: this.jsonFire[index]['contact'],
+                      contact_nep: this.jsonFire[index]['contact_nep'],
+                    );
+                  }
                 } else {
-                  return SizedBox(
-                    height: 0,
-                  );
+                  if ((this.jsonFire[index]['title'] != "" &&
+                      this.jsonFire[index]['title'] != null)) {
+                    return Container(
+                      margin: EdgeInsets.only(top: 10, bottom: 10),
+                      child: Text(
+                        this.isNep
+                            ? this.jsonFire[index]['title_nep']
+                            : this.jsonFire[index]['title'],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    );
+                  }
                 }
               } else {
                 return Center(child: CircularProgressIndicator());

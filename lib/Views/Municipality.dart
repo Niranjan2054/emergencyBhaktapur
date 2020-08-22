@@ -1,14 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:emergencyBhaktapur/Views/Bhaktapur.dart';
-import 'package:emergencyBhaktapur/Views/SuryaBinayak.dart';
-import 'package:emergencyBhaktapur/Views/Changu.dart';
-import 'package:emergencyBhaktapur/Views/Thimi.dart';
 import 'package:swipedetector/swipedetector.dart';
 import 'package:emergencyBhaktapur/Component/Municipality_Button_Navigation_Bar.dart'
     as bnb;
-
+import 'package:emergencyBhaktapur/Views/ContactList.dart';
 class Municipality extends StatefulWidget {
   @override
   _MunicipalityState createState() => _MunicipalityState();
@@ -64,10 +60,10 @@ class _MunicipalityState extends State<Municipality> {
           },
           scrollDirection: Axis.vertical,
           children: <Widget>[
-            Bhaktapur(),
-            Changu(),
-            Thimi(),
-            SuryaBinayak(),
+            ContactList(st:'bhaktapur',appBar: 'Bhaktapur',appBarNepali: 'भक्तपुर',isDrawer: false,),
+            ContactList(st:'changu',appBar: 'Changu Narayan',appBarNepali: 'चागुनारायण',isDrawer: false,),
+            ContactList(st:'thimi',appBar: 'Madhayapur Thimi',appBarNepali: 'मध्यपुर ठिमी',isDrawer: false,),
+            ContactList(st:'suryabinayak',appBar: 'Surya Binayak',appBarNepali: 'सुर्यविनायक',isDrawer: false,),
           ],
         ),
       ),

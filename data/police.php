@@ -12,7 +12,7 @@
 		"id": "2",
 		"title": "Mahanagariya Prahari Parisar,Bhaktapur",
 		"title_nep": "महानगरीय प्रहरी परिसर, भक्तपुर ",
-		"cont€act": "9851283020",
+		"contact": "9851283020",
 		"contact_nep": " ९८५१२८३०२०",
 		"isTitle":"0"
 	},

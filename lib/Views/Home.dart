@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:move_to_background/move_to_background.dart';
 import 'package:emergencyBhaktapur/Component/Button_Navigation_Bar.dart' as bnb;
-import 'package:emergencyBhaktapur/Views/Ambulance.dart';
-import 'package:emergencyBhaktapur/Views/Hospital.dart';
 import 'package:emergencyBhaktapur/Views/ContactList.dart';
 import 'package:swipedetector/swipedetector.dart';
 
@@ -67,7 +65,7 @@ class _HomeState extends State<Home> {
             },
             scrollDirection: Axis.vertical,
             children: <Widget>[
-              Ambulance(),
+              ContactList(st:'ambulance',appBar: 'Ambulance',appBarNepali: 'एम्बुलेन्स',),
               ContactList(st:'hospital',appBar: 'Hospital',appBarNepali: 'हस्पिटल',),
               ContactList(st:'fireBrigade',appBar: 'Fire Brigade',appBarNepali: 'दमकल',),
               ContactList(st:'police',appBar: 'Police',appBarNepali: 'पुलिस',),

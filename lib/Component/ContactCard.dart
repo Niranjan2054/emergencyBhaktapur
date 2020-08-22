@@ -29,7 +29,7 @@ class ContactCard extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width,
         // height: 55,
-        margin: EdgeInsets.only(top: 10, bottom: 10),
+        margin: EdgeInsets.only(top: 10, bottom: 10,left: 10,right: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
