@@ -3,8 +3,8 @@
 		"id": "1",
 		"title": "Sabbahan,Bhaktapur Nagarpalika",
 		"title_nep": "शवबाहन भक्तपुर नगरपालिका",
-		"contact": "01-661013200",
-		"contact_nep": "०१-६६१०१३२००",
+		"contact": "9841432601",
+		"contact_nep": "९८४१४३२६०१",
 		"isTitle":"0"
 	},
 	{
@@ -27,8 +27,8 @@
 		"id": "4",
 		"title": "Devdol Samaj",
 		"title_nep": "देबदोल समाज ",
-		"contact": "981856935",
-		"contact_nep": "९८१८५६९३५",
+		"contact": "9818569351",
+		"contact_nep": "९८१८५६९३५१",
 		"isTitle":"0"
 	},
 	{

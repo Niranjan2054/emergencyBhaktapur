@@ -70,6 +70,7 @@ flutter:
       - assets/images/developers/luja.jpg
       - assets/images/developers/niranjan.jpg
       - assets/images/developers/sunil.jpg
+      - assets/images/developers/nhuza.jpg
       - assets/images/ambulance.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see

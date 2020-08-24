@@ -84,16 +84,16 @@
 		"id": "11",
 		"title": "Nepal Electricity Authority Environment and Social Studies Department,kharipati",
 		"title_nep": "नेपाल विधुत प्राधिकरण वातावरण तथा सामाजिक अध्ययन विभाग,खरिपाती ",
-		"contact": "01-6616660",
-		"contact_nep": "०१-६६१६६६०",
+		"contact": "01-6611580",
+		"contact_nep": "०१-६६११५८०",
 		"isTitle":"0"
 	},
 	{
 		"id": "12",
 		"title": "Nepal Electricity Authority Training Center,kharipati",
 		"title_nep": "नेपाल विधुत प्राधिकरण प्रशिक्षण केन्द्र, खरिपाती",
-		"contact": "01-6611580",
-		"contact_nep": "०१-६६११५८०",
+		"contact": "01-6616660",
+		"contact_nep": "०१-६६१६६६०",
 		"isTitle":"0"
 	},
 	{

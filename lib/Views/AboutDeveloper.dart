@@ -42,6 +42,7 @@ class AboutDeveloper extends StatelessWidget {
                 email: "sitikhubikesh@gmail.com",
                 phone: '9860117649',
                 image: "assets/images/developers/bikesh.jpg",
+                university: "https://khwopa.edu.np/",
               ),
               DeveloperCard(
                 name: "Luja Shakya",
@@ -49,6 +50,7 @@ class AboutDeveloper extends StatelessWidget {
                 phone: '9860685929',
                 email: "shakyaluja445@gmail.com",
                 image: "assets/images/developers/luja.jpg",
+                university: "https://khwopa.edu.np/",
               ),
               DeveloperCard(
                 name: "Niranjan Bekoju",
@@ -56,6 +58,7 @@ class AboutDeveloper extends StatelessWidget {
                 phone: '9843803828',
                 email: "bekojuniranjan@gmail.com",
                 image: "assets/images/developers/niranjan.jpg",
+                university: "https://khwopa.edu.np/",
               ),
               DeveloperCard(
                 name: "Sunil Banmala",
@@ -63,6 +66,15 @@ class AboutDeveloper extends StatelessWidget {
                 phone: '9840521409',
                 email: "sunilbanmala0@gmail.com",
                 image: "assets/images/developers/sunil.jpg",
+                university: "https://khwopa.edu.np/",
+              ),
+              DeveloperCard(
+                name: "Nhuja Kiju",
+                college: "BMC",
+                phone: '9843578712',
+                email: "nhuj.kiju@gmail.com",
+                image: "assets/images/developers/nhuza.jpg",
+                university: "https://khwopa.edu.np/",
               ),
             ],
           ),
@@ -74,9 +86,9 @@ class AboutDeveloper extends StatelessWidget {
 
 class DeveloperCard extends StatelessWidget {
   DeveloperCard(
-      {Key key, this.name, this.college, this.email, this.phone, this.image})
+      {Key key, this.name, this.college, this.email, this.phone, this.image,this.university})
       : super(key: key);
-  String name, crn, image, college, email, phone;
+  String name, crn, image, college, email, phone,university;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -111,7 +123,7 @@ class DeveloperCard extends StatelessWidget {
                           IconButton(
                               icon: FaIcon(FontAwesomeIcons.university),
                               onPressed: () {
-                                _launchInBrowser('https://khwopa.edu.np/');
+                                _launchInBrowser(this.university);
                               }),
                           Text(
                             this.college,

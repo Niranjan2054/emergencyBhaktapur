@@ -4,7 +4,7 @@
 		"title": "Suryabinayak Municipality",
 		"title_nep": "सुर्यविनायक नगरपालिका ",
 		"contact": "01-6612193 ",
-		"contact_nep": "०१-६६१२1९३ ",
+		"contact_nep": "०१-६६१२१९३ ",
 		"isTitle":"0"
 	},
 	{

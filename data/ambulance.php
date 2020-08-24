@@ -11,8 +11,8 @@
 		"id": "2",
 		"title": "Bhaktapur Cancer Hospital",
 		"title_nep": "भक्तपुर क्यान्सर हस्पिटल",
-		"contact": "9841539930",
-		"contact_nep": "९८४१५३९९३०",
+		"contact": "9860171552",
+		"contact_nep": "९८६०१७१५५२",
 		"isTitle":"0"
 	},
 	
@@ -20,8 +20,8 @@
 		"id": "3",
 		"title": "Bhaktapur Hospital",
 		"title_nep": "भक्तपुर हस्पिटल",
-		"contact": "9840256340",
-		"contact_nep": "९८४०२५६३४०",
+		"contact": "9840256350",
+		"contact_nep": "९८४०२५६३५०",
 		"isTitle":"0"
 	},
 	{
@@ -49,11 +49,35 @@
 		"isTitle":"0"
 	},
 	{
+		"id": "12",
+		"title": "Nagarik C. Hospital",
+		"title_nep": "नागरिक हस्पिटल ",
+		"contact": "9851133759",
+		"contact_nep": "९८५११३३७५९",
+		"isTitle":"0"
+	},
+	{
+		"id": "14",
+		"title": "Nepal Korea Friendship Hospital",
+		"title_nep": "नेपाल कोरिया मैत्री हस्पिटल",
+		"contact": "9841257048",
+		"contact_nep": "९८४१२५७०४८",
+		"isTitle":"0"
+	},
+	{
 		"id": "7",
 		"title": "Siddi Smriti Hospital",
 		"title_nep": "सिद्दी स्मृति हस्पिटल ",
-		"contact": "9841204991",
-		"contact_nep": "९८४१२०४९९१",
+		"contact": "9741204991",
+		"contact_nep": "९७४१२०४९९१",
+		"isTitle":"0"
+	},
+	{
+		"id": "20",
+		"title": "Summit Hospital",
+		"title_nep": "सम्मित हस्पिटल  ",
+		"contact": "9860328870",
+		"contact_nep": "९८६०३२८८७०",
 		"isTitle":"0"
 	},
 	{
@@ -73,11 +97,11 @@
 		"isTitle":"0"
 	},
 	{
-		"id": "10",
-		"title": "Red Cross Changunarayan",
-		"title_nep": "चागुनारायण रेडक्रस ",
-		"contact": "01-6622464",
-		"contact_nep": "०१-६६२२४६४",
+		"id": "9",
+		"title": "Red Cross Balkot",
+		"title_nep": "भक्तपुर रेडक्रस बालकोट",
+		"contact": "9864272728",
+		"contact_nep": "९८६४२७२७२८",
 		"isTitle":"0"
 	},
 	{
@@ -89,19 +113,27 @@
 		"isTitle":"0"
 	},
 	{
+		"id": "11",
+		"title": "Red Cross Nagarkot Samudaya",
+		"title_nep": "नगरकोट सामुदायिक रेडक्रस ",
+		"contact": "9863194028",
+		"contact_nep": "९८६३१९४०२८",
+		"isTitle":"0"
+	},
+	{
 		"id": "12",
 		"title": "Red Cross Nalinchowk",
 		"title_nep": "नलिङ्ग चोक रेडक्रस ",
-		"contact": "9741208341",
-		"contact_nep": "९७४१२०८३४१",
+		"contact": "9843559090",
+		"contact_nep": "९८४३५५९०९०",
 		"isTitle":"0"
 	},
 	{
 		"id": "13",
 		"title": "Red Cross Thathali",
 		"title_nep": "ताथली रेडक्रस ",
-		"contact": "9841233815",
-		"contact_nep": "९८४१२३३८१५",
+		"contact": "9861695036",
+		"contact_nep": "९८६१६९५०३६",
 		"isTitle":"0"
 	},
 	{
@@ -124,7 +156,7 @@
 		"id": "16",
 		"title": "Bhaktapur Municipality",
 		"title_nep": "भक्तपुर नगरपालिका ",
-		"contact": "9854182799",
+		"contact": "9851082799",
 		"contact_nep": "९८५१०८२७९९",
 		"isTitle":"0"
 	},

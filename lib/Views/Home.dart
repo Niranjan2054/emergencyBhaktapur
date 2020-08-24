@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
               ContactList(st:'ambulance',appBar: 'Ambulance',appBarNepali: 'एम्बुलेन्स',),
               ContactList(st:'hospital',appBar: 'Hospital',appBarNepali: 'हस्पिटल',),
               ContactList(st:'fireBrigade',appBar: 'Fire Brigade',appBarNepali: 'दमकल',),
-              ContactList(st:'police',appBar: 'Police',appBarNepali: 'पुलिस',),
+              ContactList(st:'police',appBar: 'Police',appBarNepali: 'प्रहरी',),
               ContactList(st:'sabbahan',appBar: 'Sab Bahan',appBarNepali: 'शवबाहन',),
             ],
           ),

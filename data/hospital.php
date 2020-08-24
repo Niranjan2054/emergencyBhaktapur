@@ -157,7 +157,7 @@
 		"title": "Summit Hospital",
 		"title_nep": "सम्मित हस्पिटल  ",
 		"contact": "01-6631736",
-		"contact_nep": "०१-६६३१६३६",
+		"contact_nep": "०१-६६३१७३६",
 		"isTitle":"0"
 	},
 	{
@@ -204,16 +204,16 @@
 		"id": "26",
 		"title": "District Community Eye Center",
 		"title_nep": "जिल्ला समुदाय आँखा केन्द्र ",
-		"contact": "01-6610317",
-		"contact_nep": "०१-६६१०३१७",
+		"contact": "01-6618058",
+		"contact_nep": "०१-६६१८०५८",
 		"isTitle":"0"
 	},
 	{
 		"id": "27",
 		"title": "Madhayapur Health Care Center",
 		"title_nep": "मध्यपुर स्वास्थ्य सेवा केन्द्र",
-		"contact": "01-6610317",
-		"contact_nep": "०१-६६१०३१७",
+		"contact": "01-6610316",
+		"contact_nep": "०१-६६१०३१६",
 		"isTitle":"0"
 	}
 ]

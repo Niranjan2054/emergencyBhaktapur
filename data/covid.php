@@ -9,7 +9,7 @@
 	},
 	{
 		"id": "2",
-		"title": "MOHP Hot Line (25hrs)",
+		"title": "MOHP Hot Line (24hrs)",
 		"title_nep": "एम.ओ एच पि हत लाईन(२४ घण्टा)",
 		"contact": "1133",
 		"contact_nep": "११३३",
