@@ -59,6 +59,20 @@ class _ContactListState extends State<ContactList> {
     });
   }
 
+  void madeNepali() {
+    setState(() {
+      isNep = true;
+      globals.isNepali = isNep;
+    });
+  }
+
+  void madeEnglish() {
+    setState(() {
+      isNep = false;
+      globals.isNepali = isNep;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,65 +84,74 @@ class _ContactListState extends State<ContactList> {
           Container(
             height: 30,
             padding: EdgeInsets.only(top: 15, left: 5),
-            child: Text(
-              '🇺🇸',
-              style: TextStyle(
-                fontSize: 28,
+            child: InkWell(
+              onTap: madeEnglish,
+              child: Text(
+                '🇺🇸',
+                style: TextStyle(
+                  fontSize: 28,
+                ),
               ),
             ),
           ),
-          AnimatedContainer(
-            height: 40,
-            width: 100,
-            duration: Duration(
-              milliseconds: 500,
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(40.0),
-                color: Colors.white70,
-                border: Border.all(
-                  color: Colors.red,
-                  width: 8,
-                )),
-            child: Stack(
-              children: <Widget>[
-                AnimatedPositioned(
-                  child: InkWell(
-                    onTap: toggleLanguage,
-                    child: AnimatedSwitcher(
-                        duration: Duration(milliseconds: 500),
-                        child: this.isNep
-                            ? Icon(
-                                Icons.check_circle,
-                                color: Colors.red,
-                                size: 35,
-                                key: UniqueKey(),
-                              )
-                            : Icon(
-                                Icons.check_circle,
-                                color: Colors.red,
-                                size: 35,
-                                key: UniqueKey(),
-                              )),
+          InkWell(
+            onTap: toggleLanguage,
+            child: AnimatedContainer(
+              height: 40,
+              width: 100,
+              duration: Duration(
+                milliseconds: 500,
+              ),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40.0),
+                  color: Colors.white70,
+                  border: Border.all(
+                    color: Colors.red,
+                    width: 8,
+                  )),
+              child: Stack(
+                children: <Widget>[
+                  AnimatedPositioned(
+                    child: InkWell(
+                      onTap: toggleLanguage,
+                      child: AnimatedSwitcher(
+                          duration: Duration(milliseconds: 500),
+                          child: this.isNep
+                              ? Icon(
+                                  Icons.check_circle,
+                                  color: Colors.red,
+                                  size: 35,
+                                  key: UniqueKey(),
+                                )
+                              : Icon(
+                                  Icons.check_circle,
+                                  color: Colors.red,
+                                  size: 35,
+                                  key: UniqueKey(),
+                                )),
+                    ),
+                    duration: Duration(
+                      milliseconds: 500,
+                    ),
+                    curve: Curves.easeIn,
+                    top: 3,
+                    left: this.isNep ? 45 : 5,
+                    right: this.isNep ? 20 : 60,
                   ),
-                  duration: Duration(
-                    milliseconds: 500,
-                  ),
-                  curve: Curves.easeIn,
-                  top: 3,
-                  left: this.isNep ? 45 : 5,
-                  right: this.isNep ? 20 : 60,
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Container(
             height: 30,
             padding: EdgeInsets.only(top: 15, left: 5),
-            child: Text(
-              '🇳🇵',
-              style: TextStyle(
-                fontSize: 28,
+            child: InkWell(
+              onTap: madeNepali,
+              child: Text(
+                '🇳🇵',
+                style: TextStyle(
+                  fontSize: 28,
+                ),
               ),
             ),
           ),
@@ -147,7 +170,10 @@ class _ContactListState extends State<ContactList> {
                   });
                 })
             : IconButton(
-                icon: Icon(Icons.arrow_back,size: 34,),
+                icon: Icon(
+                  Icons.arrow_back,
+                  size: 34,
+                ),
                 onPressed: () => Navigator.of(context).pop(),
               ),
         automaticallyImplyLeading: false,

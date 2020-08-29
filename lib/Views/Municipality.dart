@@ -61,7 +61,7 @@ class _MunicipalityState extends State<Municipality> {
           scrollDirection: Axis.vertical,
           children: <Widget>[
             ContactList(st:'bhaktapur',appBar: 'Bhaktapur',appBarNepali: 'भक्तपुर',isDrawer: false,),
-            ContactList(st:'changu',appBar: 'Changu Narayan',appBarNepali: 'चागुनारायण',isDrawer: false,),
+            ContactList(st:'changu',appBar: 'Changu Narayan',appBarNepali: 'चाँगुनारायण',isDrawer: false,),
             ContactList(st:'thimi',appBar: 'Madhayapur Thimi',appBarNepali: 'मध्यपुर ठिमी',isDrawer: false,),
             ContactList(st:'suryabinayak',appBar: 'Surya Binayak',appBarNepali: 'सुर्यविनायक',isDrawer: false,),
           ],

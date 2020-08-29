@@ -74,7 +74,7 @@ class AboutDeveloper extends StatelessWidget {
                 phone: '9843578712',
                 email: "nhuj.kiju@gmail.com",
                 image: "assets/images/developers/nhuza.jpg",
-                university: "https://khwopa.edu.np/",
+                university: "http://bmcbkt.edu.np/",
               ),
             ],
           ),

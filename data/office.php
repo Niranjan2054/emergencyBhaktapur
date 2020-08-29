@@ -26,7 +26,7 @@
 	{
 		"id": "6",
 		"title": "District Ayuktiko Office, Bhaktapur",
-		"title_nep": "जिल्ला आयुक्तिक कार्यालय, भक्तपुर ",
+		"title_nep": "जिल्ला आयुक्त कार्यालय, भक्तपुर ",
 		"contact": "01-6610123",
 		"contact_nep": "०१-६६१०१२३",
 		"isTitle":"0"
@@ -34,7 +34,7 @@
     {
 		"id": "3",
 		"title": "District Co-ordination Commitee Bhaktapur",
-		"title_nep": "जिल्ला समन्यय समिति कार्यालय,भक्तपुर ",
+		"title_nep": "जिल्ला समन्वय समिति कार्यालय,भक्तपुर ",
 		"contact": "01-6610970",
 		"contact_nep": " ०१-६६१०९७०",
 		"isTitle":"0"

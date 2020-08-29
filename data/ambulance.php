@@ -27,7 +27,7 @@
 	{
 		"id": "4",
 		"title": "Dr. Iwamura Hospital",
-		"title_nep": "ड. इवामुरा मेमोरियल हस्पिटल",
+		"title_nep": "डा. इवामुरा मेमोरियल हस्पिटल",
 		"contact": "9860025333",
 		"contact_nep": "९८६००२५३३३",
 		"isTitle":"0"
@@ -35,7 +35,7 @@
 	{
 		"id": "5",
 		"title": "Kathmandu Cancer Center",
-		"title_nep": "काठमान्दौ क्यान्सर सेन्टर ",
+		"title_nep": "काठमाडौं क्यान्सर सेन्टर ",
 		"contact": "9841466550",
 		"contact_nep": "९८४१४६६५५०",
 		"isTitle":"0"
@@ -66,7 +66,7 @@
 	},
 	{
 		"id": "7",
-		"title": "Siddi Smriti Hospital",
+		"title": "Siddhi Smriti Hospital",
 		"title_nep": "सिद्दी स्मृति हस्पिटल ",
 		"contact": "9741204991",
 		"contact_nep": "९७४१२०४९९१",
@@ -123,7 +123,7 @@
 	{
 		"id": "12",
 		"title": "Red Cross Nalinchowk",
-		"title_nep": "नलिङ्ग चोक रेडक्रस ",
+		"title_nep": "नलिञ्चोक रेडक्रस ",
 		"contact": "9843559090",
 		"contact_nep": "९८४३५५९०९०",
 		"isTitle":"0"
@@ -134,14 +134,6 @@
 		"title_nep": "ताथली रेडक्रस ",
 		"contact": "9861695036",
 		"contact_nep": "९८६१६९५०३६",
-		"isTitle":"0"
-	},
-	{
-		"id": "14",
-		"title": "Red Cross Thimi",
-		"title_nep": "ठिमी रेडक्रस ",
-		"contact": "9849170256",
-		"contact_nep": "९८४९१७०२५६",
 		"isTitle":"0"
 	},
 	{
@@ -203,7 +195,7 @@
 	{
 		"id": "22",
 		"title": "Changu Health Post",
-		"title_nep": "चागु स्वास्थ्य चौकी ",
+		"title_nep": "चाँगु स्वास्थ्य चौकी ",
 		"contact": "9849424813",
 		"contact_nep": "९८४९४२४८१३",
 		"isTitle":"0"
@@ -227,7 +219,7 @@
 	{
 		"id": "25",
 		"title": "Sudal Bramahayani Bikash Kendra",
-		"title_nep": "सुदाल ब्रम्हायण बिकास केन्द्र  ",
+		"title_nep": "सुदाल ब्राम्हयणी बिकास केन्द्र  ",
 		"contact": "9843633744",
 		"contact_nep": "९८४३६३३७४४",
 		"isTitle":"0"

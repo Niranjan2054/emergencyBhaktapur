@@ -42,8 +42,8 @@
 	},
 	{
 		"id": "6",
-		"title": "Iwamura M. Hospital",
-		"title_nep": "इवामुरा मेमोरियल हस्पिटल ",
+		"title": "Dr. Iwamura M. Hospital",
+		"title_nep": "डा. इवामुरा मेमोरियल हस्पिटल ",
 		"contact": "01-6612695",
 		"contact_nep": "०१-६६१२६९५",
 		"isTitle":"0"
@@ -51,7 +51,7 @@
 	{
 		"id": "7",
 		"title": "Kanti Children's Hospital",
-		"title_nep": "इकान्ति चिल्ड्रेन हस्पिटल ",
+		"title_nep": "कान्ति बाल हस्पिटल",
 		"contact": "01-4414798",
 		"contact_nep": "०१-४४१४७९८",
 		"isTitle":"0"
@@ -59,7 +59,7 @@
 	{
 		"id": "8",
 		"title": "Kathmandu Cancer Hospital",
-		"title_nep": "काठमान्दौ क्यान्सर हस्पिटल ",
+		"title_nep": "काठमाडौं क्यान्सर हस्पिटल ",
 		"contact": "01-5091629",
 		"contact_nep": "०१-५०९१६२९",
 		"isTitle":"0"
@@ -171,7 +171,7 @@
 	{
 		"id": "22",
 		"title": "Bhagawati Sthan Janaswasthaya",
-		"title_nep": "भगवती  स्थान  जनस्वास्थ्य  ",
+		"title_nep": "भगवतीस्थान  जनस्वास्थ्य  ",
 		"contact": "01-6612163",
 		"contact_nep": "०१-६६१२१६३",
 		"isTitle":"0"
@@ -179,7 +179,7 @@
 	{
 		"id": "23",
 		"title": "Byasi Janaswasthaya",
-		"title_nep": "ब्यसी जनस्वास्थ्य  ",
+		"title_nep": "व्यासी जनस्वास्थ्य  ",
 		"contact": "01-6610648",
 		"contact_nep": "०१-६६१०६४८",
 		"isTitle":"0"
@@ -187,7 +187,7 @@
 	{
 		"id": "24",
 		"title": "Changu Primary Health Care",
-		"title_nep": "चागु प्राथमिक स्वास्थ्य सेवा ",
+		"title_nep": "चाँगु प्राथमिक स्वास्थ्य सेवा ",
 		"contact": "9849424813",
 		"contact_nep": "९८४९४२४८१३",
 		"isTitle":"0"
@@ -195,7 +195,7 @@
 	{
 		"id": "25",
 		"title": "Chayamasingh Janaswasthaya",
-		"title_nep": "च्याम्हसिह जनस्वास्थ्य ",
+		"title_nep": "च्यामासिंह जनस्वास्थ्य ",
 		"contact": "01-6610317",
 		"contact_nep": "०१-६६१०३१७",
 		"isTitle":"0"
@@ -203,7 +203,7 @@
 	{
 		"id": "26",
 		"title": "District Community Eye Center",
-		"title_nep": "जिल्ला समुदाय आँखा केन्द्र ",
+		"title_nep": "जिल्ला सामुदायिक आँखा केन्द्र ",
 		"contact": "01-6618058",
 		"contact_nep": "०१-६६१८०५८",
 		"isTitle":"0"
