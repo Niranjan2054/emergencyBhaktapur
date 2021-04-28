@@ -35,28 +35,28 @@ class BottomNavigationBar extends StatelessWidget {
           'B',
           style: TextStyle(
             fontSize: 26,
-            color:Colors.white,
+            color: Colors.white,
           ),
         ),
-         Text(
+        Text(
           'C',
           style: TextStyle(
             fontSize: 26,
-            color:Colors.white,
+            color: Colors.white,
           ),
         ),
-         Text(
+        Text(
           'M',
           style: TextStyle(
             fontSize: 26,
-            color:Colors.white,
+            color: Colors.white,
           ),
         ),
-         Text(
+        Text(
           'S',
           style: TextStyle(
             fontSize: 26,
-            color:Colors.white,
+            color: Colors.white,
           ),
         ),
       ],
