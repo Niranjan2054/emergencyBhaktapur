@@ -56,14 +56,6 @@
 		"isTitle":"1"
 	},
 	{
-		"id": "7",
-		"title": "Madhyapur Thimi Municipality",
-		"title_nep": "मध्यपुर थिमी नगरपालिका",
-		"contact": "9841257048",
-		"contact_nep": "९८४१२५७०४८",
-		"isTitle":"0"
-	},
-	{
 		"id": "8",
 		"title": "Bhaktapur Municipality",
 		"title_nep": "भक्तपुर नगरपालिका",
@@ -80,19 +72,19 @@
 		"isTitle":"0"
 	},
 	{
+		"id": "7",
+		"title": "Madhyapur Thimi Municipality",
+		"title_nep": "मध्यपुर थिमी नगरपालिका",
+		"contact": "9841257048",
+		"contact_nep": "९८४१२५७०४८",
+		"isTitle":"0"
+	},
+	{
 		"id": "10",
 		"title": "Suryabinayak Municipality",
 		"title_nep": "सुर्यविनायक नगरपालिका",
 		"contact": "9841395199",
 		"contact_nep": "९८४१३९५१९९",
-		"isTitle":"0"
-	},
-	{
-		"id": "1",
-		"title": "Covid Ambulance",
-		"title_nep": "कोभिड एम्बुलेन्स",
-		"contact": "9851320321",
-		"contact_nep": "९८५१३२०३२१",
 		"isTitle":"0"
 	},
 	{
