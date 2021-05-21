@@ -1,13 +1,5 @@
 [
 	{
-		"id": "1",
-		"title": "Covid Ambulance",
-		"title_nep": "कोभिड एम्बुलेन्स",
-		"contact": "9851320321",
-		"contact_nep": "९८५१३२०३२१",
-		"isTitle":"0"
-	},
-	{
 		"id": "2",
 		"title": "MOHP Hot Line (6am-10pm)",
 		"title_nep": "एम.ओ.एच.पि. हत लाईन(विहान ६-बेलुका १०)",
@@ -56,7 +48,87 @@
 		"isTitle":"0"
 	},
 	{
+		"id": "1",
+		"title": "Covid Ambulance",
+		"title_nep": "कोभिड एम्बुलेन्स ",
+		"contact": "",
+		"contact_nep": "",
+		"isTitle":"1"
+	},
+	{
 		"id": "7",
+		"title": "Madhyapur Thimi Municipality",
+		"title_nep": "मध्यपुर थिमी नगरपालिका",
+		"contact": "9841257048",
+		"contact_nep": "९८४१२५७०४८",
+		"isTitle":"0"
+	},
+	{
+		"id": "8",
+		"title": "Bhaktapur Municipality",
+		"title_nep": "भक्तपुर नगरपालिका",
+		"contact": "9851082799",
+		"contact_nep": "९८५१०८२७९९",
+		"isTitle":"0"
+	},
+	{
+		"id": "9",
+		"title": "Bhaktapur Municipality",
+		"title_nep": "भक्तपुर नगरपालिका",
+		"contact": "9851320321",
+		"contact_nep": "९८५१३२०३२१",
+		"isTitle":"0"
+	},
+	{
+		"id": "10",
+		"title": "Suryabinayak Municipality",
+		"title_nep": "सुर्यविनायक नगरपालिका",
+		"contact": "9841395199",
+		"contact_nep": "९८४१३९५१९९",
+		"isTitle":"0"
+	},
+	{
+		"id": "1",
+		"title": "Covid Ambulance",
+		"title_nep": "कोभिड एम्बुलेन्स",
+		"contact": "9851320321",
+		"contact_nep": "९८५१३२०३२१",
+		"isTitle":"0"
+	},
+	{
+		"id": "1",
+		"title": "Punya Khatri Rajan Basukala",
+		"title_nep": "पुण्य खत्री राजन बसुकला",
+		"contact": "9851082799",
+		"contact_nep": "९८५१०८२७९९",
+		"isTitle":"0"
+	},
+	{
+		"id": "1",
+		"title": "Buddha Krishna Baga",
+		"title_nep": "बुद्ध कृष्ण बाग",
+		"contact": "9841257048",
+		"contact_nep": "९८४१२५७०४८",
+		"isTitle":"0"
+	},
+	{
+		"id": "1",
+		"title": "KeshabRaj Thapa",
+		"title_nep": "केशवराज थापा",
+		"contact": "9841395199",
+		"contact_nep": "९८४१३९५१९९",
+		"isTitle":"0"
+	},
+	{
+		"id": "1",
+		"title": "ShivaHari Adhikari",
+		"title_nep": "शिवहरी अधिकारि",
+		"contact": "9851241809",
+		"contact_nep": "९८५१२४१८०९",
+		"isTitle":"0"
+	},
+	{
+		"id": "10",
 		"title": "Oxygen",
 		"title_nep": "अक्सिजन ",
 		"contact": "",
@@ -64,7 +136,7 @@
 		"isTitle":"1"
 	},
 	{
-		"id": "7",
+		"id": "11",
 		"title": "Oxygen 24 hrs.",
 		"title_nep": "अक्सिजन ",
 		"contact": "9851210581",
@@ -72,7 +144,7 @@
 		"isTitle":"0"
 	},
 	{
-		"id": "7",
+		"id": "12",
 		"title": "Oxygen 24 hrs.",
 		"title_nep": "अक्सिजन ",
 		"contact": "9851210584",
@@ -80,7 +152,7 @@
 		"isTitle":"0"
 	},
 	{
-		"id": "7",
+		"id": "12",
 		"title": "Bhaktapur District",
 		"title_nep": "भक्तपुर जिल्ला",
 		"contact": "",
@@ -88,7 +160,7 @@
 		"isTitle":"1"
 	},
 	{
-		"id": "7",
+		"id": "13",
 		"title": "Bhaktapur Hospital",
 		"title_nep": "भक्तपुर हस्पितल ",
 		"contact": "01-6610798",
@@ -96,7 +168,7 @@
 		"isTitle":"0"
 	},
 	{
-		"id": "8",
+		"id": "14",
 		"title": "Nepal Korea Friendship Hospital",
 		"title_nep": "नेपाल कोरिया मैत्री हस्पितल",
 		"contact": "01-6633442",
@@ -104,7 +176,7 @@
 		"isTitle":"0"
 	},
 	{
-		"id": "9",
+		"id": "15",
 		"title": "Janaswasthya Karyalaye, Katunje",
 		"title_nep": "जनस्वास्थ्य कार्यालय, कतुन्जे",
 		"contact": "01-6615271",
