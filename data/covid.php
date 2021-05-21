@@ -88,38 +88,6 @@
 		"isTitle":"0"
 	},
 	{
-		"id": "1",
-		"title": "Punya Khatri Rajan Basukala",
-		"title_nep": "पुण्य खत्री राजन बसुकला",
-		"contact": "9851082799",
-		"contact_nep": "९८५१०८२७९९",
-		"isTitle":"0"
-	},
-	{
-		"id": "1",
-		"title": "Buddha Krishna Baga",
-		"title_nep": "बुद्ध कृष्ण बाग",
-		"contact": "9841257048",
-		"contact_nep": "९८४१२५७०४८",
-		"isTitle":"0"
-	},
-	{
-		"id": "1",
-		"title": "KeshabRaj Thapa",
-		"title_nep": "केशवराज थापा",
-		"contact": "9841395199",
-		"contact_nep": "९८४१३९५१९९",
-		"isTitle":"0"
-	},
-	{
-		"id": "1",
-		"title": "ShivaHari Adhikari",
-		"title_nep": "शिवहरी अधिकारि",
-		"contact": "9851241809",
-		"contact_nep": "९८५१२४१८०९",
-		"isTitle":"0"
-	},
-	{
 		"id": "10",
 		"title": "Oxygen",
 		"title_nep": "अक्सिजन ",
