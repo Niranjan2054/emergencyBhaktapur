@@ -1,7 +1,7 @@
 [
 	{
 		"id": "1",
-		"title": "Bhaktapur Cancer Hospital",
+		"title": "Bhaktapur Cancer Hospital(Lalitpur)",
 		"title_nep": "भक्तपुर क्यान्सर हस्पिटल",
 		"contact": "01-6611532",
 		"contact_nep": "०१-६६११५३२",
@@ -10,7 +10,7 @@
 	
 	{
 		"id": "2",
-		"title": "Bhaktapur Hospital",
+		"title": "Bhaktapur Hospital(Lalitpur)",
 		"title_nep": "भक्तपुर हस्पिटल",
 		"contact": "01-6610798",
 		"contact_nep": "०१-६६१०७९८",
@@ -18,7 +18,7 @@
 	},
 	{
 		"id": "3",
-		"title": "Bir Hospital",
+		"title": "Bir Hospital(Lalitpur)",
 		"title_nep": "वीर हस्पिटल",
 		"contact": "01-4221988",
 		"contact_nep": "०१-४२२१९८८",
@@ -26,7 +26,7 @@
 	},
 	{
 		"id": "4",
-		"title": "Dhulikhel Hospital",
+		"title": "Dhulikhel Hospital(Lalitpur)",
 		"title_nep": "धुलिखेल हस्पिटल ",
 		"contact": "011-590497",
 		"contact_nep": "०११-४९०४९७",
@@ -34,7 +34,7 @@
 	},
 	{
 		"id": "5",
-		"title": "Gangalal Hospital",
+		"title": "Gangalal Hospital(Lalitpur)",
 		"title_nep": "गङ्गालाल हस्पिटल ",
 		"contact": "01-4371322",
 		"contact_nep": "०१-४३७१३२२",
@@ -42,7 +42,7 @@
 	},
 	{
 		"id": "6",
-		"title": "Dr. Iwamura M. Hospital",
+		"title": "Dr. Iwamura M. Hospital(Lalitpur)",
 		"title_nep": "डा. इवामुरा मेमोरियल हस्पिटल ",
 		"contact": "01-6612695",
 		"contact_nep": "०१-६६१२६९५",
@@ -50,7 +50,7 @@
 	},
 	{
 		"id": "7",
-		"title": "Kanti Children's Hospital",
+		"title": "Kanti Children's Hospital(Lalitpur)",
 		"title_nep": "कान्ति बाल हस्पिटल",
 		"contact": "01-4414798",
 		"contact_nep": "०१-४४१४७९८",
@@ -58,7 +58,7 @@
 	},
 	{
 		"id": "8",
-		"title": "Kathmandu Cancer Hospital",
+		"title": "Kathmandu Cancer Hospital(Lalitpur)",
 		"title_nep": "काठमाडौं क्यान्सर हस्पिटल ",
 		"contact": "01-5091629",
 		"contact_nep": "०१-५०९१६२९",
@@ -66,7 +66,7 @@
 	},
 	{
 		"id": "9",
-		"title": "KMC Hospital",
+		"title": "KMC Hospital(Lalitpur)",
 		"title_nep": "के.एम.सि.हस्पिटल",
 		"contact": "01-6616568",
 		"contact_nep": "०१-६६१६५६८",
@@ -74,7 +74,7 @@
 	},
 	{
 		"id": "10",
-		"title": "Lokanthali Hospital",
+		"title": "Lokanthali Hospital(Lalitpur)",
 		"title_nep": "लोकन्थली हस्पिटल",
 		"contact": "01-6631736",
 		"contact_nep": "०१-६६३१७३६",
@@ -82,7 +82,7 @@
 	},
 	{
 		"id": "11",
-		"title": "Madhayapur Hospital",
+		"title": "Madhayapur Hospital(Lalitpur)",
 		"title_nep": "मध्यपुर हस्पिटल",
 		"contact": "01-6631658",
 		"contact_nep": "०१-६६३१६५८",
@@ -90,7 +90,7 @@
 	},
 	{
 		"id": "12",
-		"title": "Nagarik C. Hospital",
+		"title": "Nagarik C. Hospital(Lalitpur)",
 		"title_nep": "नागरिक हस्पिटल ",
 		"contact": "01-6637700",
 		"contact_nep": "०१-६६३७७००",
@@ -98,7 +98,7 @@
 	},
 	{
 		"id": "13",
-		"title": "Nepal Eye Hospital",
+		"title": "Nepal Eye Hospital(Lalitpur)",
 		"title_nep": "नेपाल आँखा हस्पिटल",
 		"contact": "01-4250691",
 		"contact_nep": "०१-४२५०६९१",
@@ -106,7 +106,7 @@
 	},
 	{
 		"id": "14",
-		"title": "Nepal Korea Friendship Hospital",
+		"title": "Nepal Korea Friendship Hospital(Lalitpur)",
 		"title_nep": "नेपाल कोरिया मैत्री हस्पिटल",
 		"contact": "01-6633442",
 		"contact_nep": "०१-६६३३४४२",
@@ -114,7 +114,7 @@
 	},
 	{
 		"id": "15",
-		"title": "Nepal Tuberculosis Control Center",
+		"title": "Nepal Tuberculosis Control Center(Lalitpur)",
 		"title_nep": "नेपाल ति.वि. केन्द्र",
 		"contact": "01-6633442",
 		"contact_nep": "०१-६६३३४४२",
@@ -122,7 +122,7 @@
 	},
 	{
 		"id": "16",
-		"title": "Patan Hospital",
+		"title": "Patan Hospital(Lalitpur)",
 		"title_nep": "पाटन हस्पिटल ",
 		"contact": "01-5522266",
 		"contact_nep": "०१-५५२२२६६",
@@ -130,7 +130,7 @@
 	},
 	{
 		"id": "17",
-		"title": "Prasuti Griha",
+		"title": "Prasuti Griha(Lalitpur)",
 		"title_nep": "प्रसुती गृह ",
 		"contact": "01-4411550",
 		"contact_nep": "०१-४४११५५०",
@@ -138,7 +138,7 @@
 	},
 	{
 		"id": "18",
-		"title": "Sahid Dharmabhakta National Transplant Center",
+		"title": "Sahid Dharmabhakta National Transplant Center(Lalitpur)",
 		"title_nep": "सहिद धर्मभक्त राष्ट्रीय प्रत्यारोपण केन्द्र",
 		"contact": "01-6614709",
 		"contact_nep": "०१-६६१४७०९",
@@ -146,7 +146,7 @@
 	},
 	{
 		"id": "19",
-		"title": "Siddhi Memorial Women and Children Hospital",
+		"title": "Siddhi Memorial Women and Children Hospital(Lalitpur)",
 		"title_nep": "सिद्दी मेमोरियल महिला तथा बाल हस्पिटल ",
 		"contact": "01-6612945",
 		"contact_nep": "०१-६६१२९४५",
@@ -154,7 +154,7 @@
 	},
 	{
 		"id": "20",
-		"title": "Summit Hospital",
+		"title": "Summit Hospital(Lalitpur)",
 		"title_nep": "सम्मित हस्पिटल  ",
 		"contact": "01-6631736",
 		"contact_nep": "०१-६६३१७३६",
@@ -162,7 +162,7 @@
 	},
 	{
 		"id": "21",
-		"title": "Health Post",
+		"title": "Health Post(Lalitpur)",
 		"title_nep": "हेल्थ पोस्ट ",
 		"contact": "",
 		"contact_nep": "",
@@ -170,7 +170,7 @@
 	},
 	{
 		"id": "22",
-		"title": "Bhagawati Sthan Janaswasthaya",
+		"title": "Bhagawati Sthan Janaswasthaya(Lalitpur)",
 		"title_nep": "भगवतीस्थान  जनस्वास्थ्य  ",
 		"contact": "01-6612163",
 		"contact_nep": "०१-६६१२१६३",
@@ -178,7 +178,7 @@
 	},
 	{
 		"id": "23",
-		"title": "Byasi Janaswasthaya",
+		"title": "Byasi Janaswasthaya(Lalitpur)",
 		"title_nep": "व्यासी जनस्वास्थ्य  ",
 		"contact": "01-6610648",
 		"contact_nep": "०१-६६१०६४८",
@@ -186,7 +186,7 @@
 	},
 	{
 		"id": "24",
-		"title": "Changu Primary Health Care",
+		"title": "Changu Primary Health Care(Lalitpur)",
 		"title_nep": "चाँगु प्राथमिक स्वास्थ्य सेवा ",
 		"contact": "9849424813",
 		"contact_nep": "९८४९४२४८१३",
@@ -194,7 +194,7 @@
 	},
 	{
 		"id": "25",
-		"title": "Chayamasingh Janaswasthaya",
+		"title": "Chayamasingh Janaswasthaya(Lalitpur)",
 		"title_nep": "च्यामासिंह जनस्वास्थ्य ",
 		"contact": "01-6610317",
 		"contact_nep": "०१-६६१०३१७",
@@ -202,7 +202,7 @@
 	},
 	{
 		"id": "26",
-		"title": "District Community Eye Center",
+		"title": "District Community Eye Center(Lalitpur)",
 		"title_nep": "जिल्ला सामुदायिक आँखा केन्द्र ",
 		"contact": "01-6618058",
 		"contact_nep": "०१-६६१८०५८",
@@ -210,7 +210,7 @@
 	},
 	{
 		"id": "27",
-		"title": "Madhayapur Health Care Center",
+		"title": "Madhayapur Health Care Center(Lalitpur)",
 		"title_nep": "मध्यपुर स्वास्थ्य सेवा केन्द्र",
 		"contact": "01-6610316",
 		"contact_nep": "०१-६६१०३१६",
