@@ -72,6 +72,14 @@
 		"isTitle":"0"
 	},
 	{
+		"id": "9",
+		"title": "Changu Narayan Municipality",
+		"title_nep": "चांगु नारायण नगरपािलका",
+		"contact": "9851241809",
+		"contact_nep": "९८५१२४१८०९",
+		"isTitle":"0"
+	},
+	{
 		"id": "7",
 		"title": "Madhyapur Thimi Municipality",
 		"title_nep": "मध्यपुर थिमी नगरपालिका",
