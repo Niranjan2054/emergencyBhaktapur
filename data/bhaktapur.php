@@ -3,8 +3,8 @@
 		"id": "1",
 		"title": "Bhaktapur Municipality",
 		"title_nep": "भक्तपुर नगरपालिका",
-		"contact": "01-6610310",
-		"contact_nep": "०१-६६१०३१०",
+		"contact": "01-6613957",
+		"contact_nep": "०१-६६१३९५७",
 		"isTitle":"0"
 	},
 	{
